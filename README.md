@@ -81,7 +81,7 @@ text-to-speech voice**. How each piece maps is in [`docs/PORTING.md`](docs/PORTI
 | Tool | Version |
 | --- | --- |
 | macOS | 15.1, Apple Silicon |
-| Xcode | 16.2 (iOS 18.3 simulator, iPhone 16 Pro) |
+| Xcode | 16.2 (iOS 18.3 simulator, iPhone 16 Pro); app minimum iOS 16.4 |
 | CocoaPods | 1.17 |
 | Node.js | 22 or later (developed with 24.x) |
 
@@ -123,6 +123,8 @@ cd server && npm ci && npm test      # 45 server tests (ElevenLabs always mocked
 ```bash
 node --test scripts/pack/*.test.mjs scripts/voice/*.test.mjs   # 187 pipeline tests
 ```
+
+GitHub Actions runs all four on every push ([`.github/workflows/test.yml`](.github/workflows/test.yml)).
 
 ## Logs
 
