@@ -4,7 +4,7 @@
  */
 import { ContentTier, Lang, NarrationLength, Poi, RouteData, Tour } from '@citytour/core';
 import { PackRepository } from '@citytour/core';
-import { Log } from '../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { PlaqueState } from '../views/common/Plaque';
 import { PreviewPoint } from '../views/common/RoutePreview';

@@ -19,7 +19,7 @@ import { useSnapshot } from 'valtio';
 import {
   DEMO_SPEEDS, DetailLevel, LocRow, LogEvents, NotifRow, TRIGGER_DISTANCES_M
 } from '@citytour/core';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { useT } from '@/platform/strings';
 import { Radius, Space, Type, useColors } from '@/theme';
 import { AppViewModel, Routes } from '@/viewmodel/AppViewModel';

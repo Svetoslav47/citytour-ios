@@ -2,7 +2,7 @@
  * Async helpers for view models. Every platform call a view model makes goes through withTimeout, so a hung
  * service never freezes a screen (AGENTS.md: explicit timeouts, never crash).
  */
-import { Log } from '../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /**

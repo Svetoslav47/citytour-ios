@@ -6,7 +6,7 @@
  */
 import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
 import { LogEvents } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 
 export const KEEP_SCREEN_TAG: string = 'citytour-tour';
 

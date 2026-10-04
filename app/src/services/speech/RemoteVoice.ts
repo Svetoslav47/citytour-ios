@@ -26,9 +26,9 @@
  */
 import { SpeechCapabilities, SpeechListener, SpeechPort, Utterance } from '@citytour/core';
 import { Lang } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
-import { RemoteConfig } from '../../app/RemoteConfig';
+import { RemoteConfig } from '@/main/RemoteConfig';
 import { shortSha } from '@citytour/core';
 import {
   ChainInput, ChainStep, decideVoice, judgeRemote, RemoteVerdict, ServerState, serverStateText, VoiceSrc

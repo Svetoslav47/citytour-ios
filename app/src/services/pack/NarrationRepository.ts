@@ -5,7 +5,7 @@
  * §7.4-7.5. Logs NARR_FALLBACK / NARR_PERSONA_FALLBACK once per slot.
  */
 import { ContentTier, Lang, Narration, NarrationLength, Persona, Poi, ProvenanceKind } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { NarrationValidator, ValidationCtx } from '@citytour/core';
 import { nameOnlyNarration, personaChain, selectNarration } from '@citytour/core';

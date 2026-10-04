@@ -25,7 +25,7 @@
 import * as Location from 'expo-location';
 import { Fix, FixListener, FixSource, LocationErrorListener, LocationSource, PermissionPort, PermissionState }
   from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { PermissionService } from './PermissionService';
 

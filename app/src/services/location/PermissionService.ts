@@ -27,7 +27,7 @@
 import { AppState, AppStateStatus, Linking, NativeEventSubscription } from 'react-native';
 import * as Location from 'expo-location';
 import { PermissionPort, PermissionState } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** Fixes at least this wide come from iOS "Precise Location: Off" (reduced accuracy, ~1-10 km). */

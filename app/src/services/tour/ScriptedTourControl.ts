@@ -12,8 +12,8 @@ import {
   TourPlan, UserPos
 } from '@citytour/core';
 import { FixSource, SnapshotListener, TourControl } from '@citytour/core';
-import { AppConfig } from '../../app/AppConfig';
-import { Log } from '../../app/Log';
+import { AppConfig } from '@/main/AppConfig';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** Royal Route order (docs/REVIEW.md stop numbering). The first, third and fourth ids match StubPackRepository. */

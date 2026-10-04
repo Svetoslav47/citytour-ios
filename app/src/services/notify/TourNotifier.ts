@@ -38,7 +38,7 @@ import {
   NOTIFY_ID, NoticeKind, NotifyContext, NotifyText, ShownNotice, contextFromSnapshot, formatNotice, isTourLive,
   noticeKind, shouldRefresh, shownDistance
 } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** iOS request identifier of the one CityTour notification (the original's id 1001 = core NOTIFY_ID). */

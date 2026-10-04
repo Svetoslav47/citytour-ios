@@ -19,7 +19,7 @@
 import * as Legacy from 'expo-file-system/legacy';
 import { File } from 'expo-file-system';
 import * as Crypto from 'expo-crypto';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 export function hexOf(bytes: Uint8Array): string {

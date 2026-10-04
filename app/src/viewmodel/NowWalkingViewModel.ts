@@ -10,9 +10,9 @@ import {
 import { Lang, LookDir } from '@citytour/core';
 import { FixSource } from '@citytour/core';
 import { ref } from 'valtio';
-import { AppConfig } from '../app/AppConfig';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppConfig } from '@/main/AppConfig';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { dialAngle, RoundedDistance, roundWalkDistance, shouldUpdateDistance } from '@citytour/core';
 import { PlaqueState } from '../views/common/Plaque';

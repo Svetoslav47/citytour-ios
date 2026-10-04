@@ -12,7 +12,7 @@ import {
 } from '@shopify/react-native-skia';
 import { Platform } from 'react-native';
 import { Camera, MapData, MapFeature, MapLayer } from '@citytour/core';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { PlaqueState } from '@/views/common/Plaque';
 import { defaultMinScale, LineWidth, MapPalette } from './MapStyle';
 import type { PoiLayer } from './PoiLayer';

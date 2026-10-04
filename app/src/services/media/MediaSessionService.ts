@@ -24,7 +24,7 @@ import type { AudioMetadata, AudioPlayer, AudioStatus } from 'expo-audio';
 import { EngineEventType, MediaMeta, MediaPlayState } from '@citytour/core';
 import { MediaCommand, MediaCommandListener, MediaSessionPort } from '@citytour/core';
 import { VoiceLabel } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 export const AVS_TAG: string = 'CityTour';

@@ -22,8 +22,8 @@ import { connect } from '../platform/Persist';
 import { Lang, NarrationLength } from '@citytour/core';
 import { PermissionPort, PermissionState, SpeechCapabilities, SpeechListener, Utterance, VoiceState } from '@citytour/core';
 import { UserSettings } from '@citytour/core';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { phrase, PhraseKey } from '@citytour/core';
 import {

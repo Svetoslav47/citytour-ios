@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { parseEnvelope } from '@citytour/core';
-import { RemoteConfig } from '../src/app/RemoteConfig';
+import { RemoteConfig } from '../src/main/RemoteConfig';
 import { Ed25519Verifier, rawKeyFromSpki } from '../src/services/remote/SignatureVerifier';
 
 const SEED = resolve(__dirname, '../../server/seed');

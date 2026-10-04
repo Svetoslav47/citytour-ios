@@ -14,11 +14,16 @@
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "CityTour uses your location to tell you about a place when you reach it and to guide you to the next stop.",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "CityTour keeps following your walk while the screen is off, so stories still start when you reach a stop.",
-        "UIBackgroundModes": ["location", "audio"],
+        "UIBackgroundModes": [
+          "location",
+          "audio"
+        ],
         "ITSAppUsesNonExemptEncryption": false
       },
       "entitlements": {
-        "com.apple.security.application-groups": ["group.com.hackyeah.citytour.ios"]
+        "com.apple.security.application-groups": [
+          "group.com.hackyeah.citytour.ios"
+        ]
       }
     },
     "plugins": [
@@ -30,10 +35,17 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#F4F5F3",
-          "dark": { "backgroundColor": "#0F1112" }
+          "dark": {
+            "backgroundColor": "#0F1112"
+          }
         }
       ],
-      ["expo-audio", { "microphonePermission": false }],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false
+        }
+      ],
       "expo-localization",
       [
         "expo-location",
@@ -46,7 +58,15 @@
       "expo-notifications",
       "expo-task-manager",
       "@bacons/apple-targets",
-      ["expo-build-properties", { "ios": { "deploymentTarget": "15.1" } }]
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true

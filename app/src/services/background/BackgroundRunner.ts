@@ -19,8 +19,8 @@ import * as Location from 'expo-location';
 import type { LocationObject } from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
 import { BackgroundListener, BackgroundPort } from '@citytour/core';
-import { AppConfig } from '../../app/AppConfig';
-import { Log } from '../../app/Log';
+import { AppConfig } from '@/main/AppConfig';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 export const BG_MODES: string[] = ['location', 'audio'];

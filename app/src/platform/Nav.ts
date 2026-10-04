@@ -4,7 +4,7 @@
  * native navigation stack (react-native-screens), so the system back gesture works as on iOS.
  */
 import { router } from 'expo-router';
-import { Log } from '../app/Log';
+import { Log } from '@/main/Log';
 
 export class NavPathInfo {
   name: string;

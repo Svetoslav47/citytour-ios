@@ -10,7 +10,7 @@
  * already in points.
  */
 import { proxy } from 'valtio';
-import { Log } from '../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** Current safe-area insets of the main window, in points. 0 when there is nothing to avoid on that edge. */

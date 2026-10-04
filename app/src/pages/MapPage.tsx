@@ -22,8 +22,8 @@ import {
   centreOnFirstFix, chooseMeSource, EngineSnapshot, Fix, FixSource, LogEvents, MapData, mapOpenBounds, MeChoice,
   MeSource, PermissionState, Projection, worldBox
 } from '@citytour/core';
-import { AppContainer } from '@/app/AppContainer';
-import { Log } from '@/app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { useT } from '@/platform/strings';
 import { RealLocationSource } from '@/services/location/RealLocationSource';
 import { Radius, Size, Space, useColors } from '@/theme';

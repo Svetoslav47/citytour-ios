@@ -5,8 +5,8 @@
  * Tour detail never flash the map before the photo; `path` '' after loading = show the fallback (the map preview).
  */
 import { Lang } from '@citytour/core';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { CoverChoice, CoverView, coverView } from '@citytour/core';
 import { withTimeout } from './Async';

@@ -7,8 +7,8 @@
 import React, { useEffect, useMemo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Lang } from '@citytour/core';
-import { AppContainer } from '@/app/AppContainer';
-import { Log } from '@/app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { kindLabel } from '@/pages/PlaceDetailPage';
 import { useT } from '@/platform/strings';
 import { Size, Space, Type, useColors } from '@/theme';

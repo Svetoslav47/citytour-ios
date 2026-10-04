@@ -34,7 +34,7 @@
 import { createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 import type { AudioPlayer, AudioStatus } from 'expo-audio';
 import { File } from 'expo-file-system';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { toUri } from '../remote/FileStore';
 import { LockScreen } from '../media/MediaSessionService';

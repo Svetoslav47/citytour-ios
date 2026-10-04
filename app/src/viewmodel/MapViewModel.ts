@@ -7,8 +7,8 @@ import { EngineSnapshot, StopProgress, StopStatus, TourPhase } from '@citytour/c
 import { Lang, MapData, RouteData, RouteLeg } from '@citytour/core';
 import { FixSource, PackRepository } from '@citytour/core';
 import { ref } from 'valtio';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { boundsOf } from '@citytour/core';
 import { PlaqueState } from '../views/common/Plaque';

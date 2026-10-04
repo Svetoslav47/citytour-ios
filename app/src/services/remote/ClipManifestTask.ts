@@ -6,7 +6,7 @@
  * name, contract and fallback log line.
  */
 import { ClipEntry, parseClipManifest } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 function parseCourseClips(text: string, root: string): ClipEntry[] {

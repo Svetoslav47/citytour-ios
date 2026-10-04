@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { proxy, useSnapshot } from 'valtio';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { t, useT } from '@/platform/strings';
 import { Radius, Size, Space, TABULAR, Type, useColors } from '@/theme';
 import { AppViewModel, PackState, Routes } from '@/viewmodel/AppViewModel';

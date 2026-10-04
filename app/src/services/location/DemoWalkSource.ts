@@ -18,8 +18,8 @@ import { Fix, FixListener, FixSource, LocationErrorListener, LocationSource } fr
 import {
   DEMO_TICK_MS, DemoTick, DemoTrack, DemoWalkPlayer, normalizeDemoSpeed, parseDemoTrack
 } from '@citytour/core';
-import { AppConfig } from '../../app/AppConfig';
-import { Log } from '../../app/Log';
+import { AppConfig } from '@/main/AppConfig';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** The active course's demo track: `key` identifies the course version, `text` is demo-walk.json. */

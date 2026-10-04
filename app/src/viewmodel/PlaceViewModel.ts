@@ -7,8 +7,8 @@ import { ContentTier, Lang, LookDir, MapData, Narration, NarrationLength, Poi, P
 } from '@citytour/core';
 import { TourPhase } from '@citytour/core';
 import { ref } from 'valtio';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { MapOverlay } from '../views/map/MapRenderer';
 import { localName } from './Format';

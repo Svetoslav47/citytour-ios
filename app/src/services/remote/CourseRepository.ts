@@ -19,7 +19,7 @@
  * With BASE_URL '' (RemoteConfig) the network is never used; downloaded courses (if any) still work.
  */
 import { PackLoadResult } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { activeAfterInstall, InstalledCourse, resolveActive } from '@citytour/core';
 import { chooseCover, CoverChoice, CoverCredit } from '@citytour/core';

@@ -11,8 +11,8 @@
 import { EngineSnapshot, StopStatus } from '@citytour/core';
 import { Lang, MapData } from '@citytour/core';
 import { ref } from 'valtio';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { uiCode } from '../platform/strings';
 import { buildSummary, SummaryStop, TourSummaryData, TourTimer } from '@citytour/core';

@@ -16,7 +16,7 @@
  * backoff; a file already in the temp folder with the right size and SHA-256 (an earlier attempt) is not fetched
  * again, so Retry after a network drop resumes instead of starting over (a course of ~1200 files, ~10 MB, plus its city places pack of ~8 MB once).
  */
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { InstalledCourse } from '@citytour/core';
 import {

@@ -10,7 +10,7 @@
  */
 import * as ed from '@noble/ed25519';
 import { sha512 } from '@noble/hashes/sha2.js';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { base64Decode, LogEvents, utf8Bytes } from '@citytour/core';
 
 /** DER prefix of an Ed25519 SubjectPublicKeyInfo (RFC 8410): SEQUENCE { SEQUENCE { OID 1.3.101.112 }, BIT STRING }. */

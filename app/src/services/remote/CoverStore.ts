@@ -7,7 +7,7 @@
  *   - Installed covers: <pack>/cover.jpg + cover.json of the downloaded course (verified with the course).
  * Every method resolves (never rejects); '' / undefined = no cover, and the caller shows its fallback.
  */
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { COVER_JPG, COVER_JSON, coverCacheName, CoverCredit, MAX_COVER_BYTES, parseCoverJson } from '@citytour/core';
 import { FileStore } from './FileStore';

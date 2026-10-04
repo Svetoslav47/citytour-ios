@@ -11,7 +11,7 @@
  *   - get()/speak() never create anything: they fail with ENGINE_UNAVAILABLE (nothing calls them on iOS);
  *   - downloadVoice() fails at once with UNSUPPORTED (there is nothing to download).
  */
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** Our own error codes (negative, so they never collide with the kit's 1002300xxx codes). */

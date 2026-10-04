@@ -33,9 +33,9 @@ import {
   FixSource, PackLoadResult, PermissionPort, PermissionState, SpeechCapabilities, VoicePlan, VoiceState
 } from '@citytour/core';
 import { EnVoiceStrategy, UiLang, UserSettings, VoiceLabel } from '@citytour/core';
-import { AppConfig } from '../app/AppConfig';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppConfig } from '@/main/AppConfig';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { LocRow, locationRow, NotifRow, notifRow, percent, voiceLangForPlan } from '@citytour/core';
 import {

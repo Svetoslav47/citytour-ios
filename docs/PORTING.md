@@ -10,7 +10,7 @@ else is ported.
 | --- | --- |
 | `common/src/main/ets/**` (contracts, core, control) | `core/src/**` (`@citytour/core`), plain TS, unchanged logic |
 | `entry/src/test/*.test.ets` (hypium) | `core/test/*.test.ts` (vitest) |
-| `entry/src/main/ets/app/*` | `app/src/app/*` |
+| `entry/src/main/ets/app/*` | `app/src/main/*` (`app/src/app/` holds only expo-router route files) |
 | `entry/src/main/ets/services/**` | `app/src/services/**` |
 | `entry/src/main/ets/viewmodel/**` | `app/src/viewmodel/**` |
 | `entry/src/main/ets/views/**` (ArkUI components) | `app/src/views/**` (`.tsx` React Native components) |
@@ -53,7 +53,7 @@ parameter with `useLocalSearchParams<{ p?: string }>().p`.
 
 | HarmonyOS | iOS / Expo |
 | --- | --- |
-| hilog (`app/Log.ets`) | `@/app/Log` (console + in-memory ring buffer shown on the Developer page) |
+| hilog (`app/Log.ets`) | `@/main/Log` (console + in-memory ring buffer shown on the Developer page) |
 | Location Kit `geoLocationManager` | `expo-location` (`watchPositionAsync`; background updates with `expo-task-manager`) |
 | `abilityAccessCtrl` location permission | `expo-location` `requestForegroundPermissionsAsync` / `getForegroundPermissionsAsync`; precise vs approximate from `ios.accuracy` |
 | `requestGlobalSwitch` (location switch) | `Location.hasServicesEnabledAsync()`; when off, `Linking.openSettings()` |

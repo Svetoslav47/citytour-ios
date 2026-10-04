@@ -19,7 +19,7 @@ import * as ExpoHaptics from 'expo-haptics';
 import { HapticKind } from '@citytour/core';
 import { HapticsPort } from '@citytour/core';
 import { HapticPlan, hapticPlan } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 
 /** One buzz per kind within this window: a re-entered state must not rattle the phone. */

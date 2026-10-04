@@ -10,7 +10,7 @@
  * A failed fetch for lack of network skips the wait for STREAM_OFFLINE_BACKOFF_MS (an offline walk never waits 3 s per
  * sentence). Never rejects.
  */
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { CourseFile, safeRelPath, SHA256_RE } from '@citytour/core';
 import {

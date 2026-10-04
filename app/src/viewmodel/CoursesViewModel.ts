@@ -17,8 +17,8 @@
 import { proxy } from 'valtio';
 import { connect } from '../platform/Persist';
 import { Lang } from '@citytour/core';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import {
   CourseRow, CourseState, courseTitle, downloadBytes, InstalledCourse, mergeCourses, progressPct, sizeLabel

@@ -11,7 +11,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { LayoutChangeEvent, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { proxy, useSnapshot } from 'valtio';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { t as tr, useT } from '@/platform/strings';
 import { Size, Space, Type, useColors } from '@/theme';
 import { AppViewModel } from '@/viewmodel/AppViewModel';

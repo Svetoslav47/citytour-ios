@@ -31,7 +31,7 @@ import { LayoutChangeEvent, Pressable, StyleSheet, Text, useColorScheme, View } 
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useSharedValue } from 'react-native-reanimated';
 import { Camera, fitBounds, locateScale, MapData, pan, zoomAt } from '@citytour/core';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { useT } from '@/platform/strings';
 import { useColors } from '@/theme';
 import { DARK, LIGHT, MapPalette } from './MapStyle';

@@ -28,8 +28,8 @@
 import type { ExtensionStorage } from '@bacons/apple-targets';
 import { EngineSnapshot } from '@citytour/core';
 import { Lang } from '@citytour/core';
-import { AppContainer } from '../app/AppContainer';
-import { Log } from '../app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { t } from '../platform/strings';
 import { CardMode, CardState, cardStateFor, shouldPushCard } from '@citytour/core';

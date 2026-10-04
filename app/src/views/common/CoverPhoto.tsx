@@ -10,7 +10,7 @@ import { LogEvents } from '@citytour/core';
 import { Image } from 'expo-image';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { useT } from '@/platform/strings';
 import { Space, Type, useColors } from '@/theme';
 

@@ -10,8 +10,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Fix, FixSource, nextDemoSpeed, PermissionState } from '@citytour/core';
-import { AppContainer } from '@/app/AppContainer';
-import { Log } from '@/app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log } from '@/main/Log';
 
 const AMBER: string = '#FFB000';
 

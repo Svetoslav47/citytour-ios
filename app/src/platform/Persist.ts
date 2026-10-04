@@ -5,7 +5,7 @@
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { proxy, subscribe } from 'valtio';
-import { Log } from '../app/Log';
+import { Log } from '@/main/Log';
 
 const PREFIX: string = 'citytour.persist.';
 const cache: Map<string, Record<string, unknown>> = new Map();

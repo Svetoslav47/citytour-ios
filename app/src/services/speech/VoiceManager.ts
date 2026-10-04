@@ -27,8 +27,8 @@ import {
   SPEECH_MODE_TEXT, SPEECH_MODE_VOICE, stateTag, VoiceEntry, VoicePolicyOptions, ZH_LOCALE
 } from '@citytour/core';
 import { storyVoicePlan } from '@citytour/core';
-import { AppConfig } from '../../app/AppConfig';
-import { Log } from '../../app/Log';
+import { AppConfig } from '@/main/AppConfig';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { DownloadCallbacks, errCode, errMsg, TtsEngines, TtsErr, VoiceInfo } from './TtsEngines';
 

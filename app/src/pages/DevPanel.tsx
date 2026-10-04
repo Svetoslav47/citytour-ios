@@ -37,8 +37,8 @@ import {
   BackgroundListener, EngineSnapshot, FixSource, Lang, LogEvents, MediaCommand, MediaMeta, MediaPlayState, NextInfo,
   SpeechCapabilities, SpeechListener, stripPauseMarkup, Tour, TourControl, TourPlan, Utterance, VoiceLabel, VoicePlan
 } from '@citytour/core';
-import { AppContainer } from '@/app/AppContainer';
-import { Log, LogLine } from '@/app/Log';
+import { AppContainer } from '@/main/AppContainer';
+import { Log, LogLine } from '@/main/Log';
 import { DevButton, devStyles, LocationDevSection } from './DevPanelLocation';
 
 const EN_SAMPLE: string[] = [

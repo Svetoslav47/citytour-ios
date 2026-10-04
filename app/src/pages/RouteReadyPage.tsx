@@ -13,7 +13,7 @@ import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSnapshot } from 'valtio';
-import { Log } from '@/app/Log';
+import { Log } from '@/main/Log';
 import { useT } from '@/platform/strings';
 import { Radius, Size, Space, TABULAR, Type, useColors } from '@/theme';
 import { AppViewModel } from '@/viewmodel/AppViewModel';

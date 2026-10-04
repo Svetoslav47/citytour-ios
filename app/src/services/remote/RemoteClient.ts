@@ -10,8 +10,8 @@
  * - BASE_URL '' (RemoteConfig) = disabled: no request is ever made.
  * Logs: REMOTE path=... status=... ms=... (no token, no text).
  */
-import { RemoteConfig } from '../../app/RemoteConfig';
-import { Log } from '../../app/Log';
+import { RemoteConfig } from '@/main/RemoteConfig';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import {
   CatalogParse, CitySummary, CourseManifest, CourseSummary, InstallToken, parseCatalog, parseCityManifest,

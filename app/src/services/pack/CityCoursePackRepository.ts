@@ -9,7 +9,7 @@
 import { Lang, MapData, Narration, NarrationLength, Persona, Poi, RouteData, SourceRef, Tour } from '@citytour/core';
 import { PackLoadResult, PackRepository } from '@citytour/core';
 import { AppIssue, IssueCode, IssueSeverity } from '@citytour/core';
-import { Log } from '../../app/Log';
+import { Log } from '@/main/Log';
 import { LogEvents } from '@citytour/core';
 import { CityInfo, layerManifests, layerPois, parseCityJson } from '@citytour/core';
 import { FilePackSource } from './FilePackRepository';
