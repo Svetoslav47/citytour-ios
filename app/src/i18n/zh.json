@@ -329,7 +329,7 @@
  "settings_off": "已关闭",
  "settings_perm_note": "点按某一行即可授权。CityTour 仅请求游览所需的权限。",
  "settings_show_intro": "再次显示介绍",
- "settings_app_language_note": "“跟随系统”将使用手机的语言，下次打开 CityTour 时生效。",
+ "settings_app_language_note": "“跟随系统”将使用手机的语言。",
  "settings_voice_now": "当前语音",
  "settings_voice_en_title": "英语语音（Laura）",
  "settings_voice_installed": "已安装",
