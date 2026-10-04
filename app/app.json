@@ -29,8 +29,8 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
-          "dark": { "backgroundColor": "#000000" }
+          "backgroundColor": "#F4F5F3",
+          "dark": { "backgroundColor": "#0F1112" }
         }
       ],
       ["expo-audio", { "microphonePermission": false }],
