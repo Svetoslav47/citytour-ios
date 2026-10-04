@@ -29,13 +29,9 @@ function emit(level: LogLevel, event: string, kv: string): void {
       ring.splice(0, ring.length - RING_MAX);
     }
     const text = `${LOG_TAG} ${level} ${event} ${kv}`;
-    if (level === 'E') {
-      console.error(text);
-    } else if (level === 'W') {
-      console.warn(text);
-    } else {
-      console.log(text);
-    }
+    // One console level for all lines (the level is in the text): console.error/warn would raise React Native's
+    // red/yellow LogBox toasts over the UI in a debug build for handled, expected states (e.g. BG_FAIL, PACK_ERR).
+    console.log(text);
     listeners.forEach((l) => l(line));
   } catch {
     // logging must never crash the app

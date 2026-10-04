@@ -8,8 +8,9 @@
  *     expo-location startLocationUpdatesAsync on the TaskManager task BG_LOCATION_TASK ('citytour-bg-location'),
  *     defined at module scope (expo-task-manager requires defineTask in the global scope of the bundle). The task
  *     feeds every background fix to subscribeBackgroundFixes() listeners (RealLocationSource consumes them).
- * start() asks for the "Always" location permission first (requestBackgroundPermissionsAsync). Refused, failed or
- * thrown -> BG_FAIL and false (ARCHITECTURE §9 row 14: the tour continues in the foreground); it never crashes.
+ * start() needs only the "While Using" location permission: updates started by the user in the foreground keep
+ * running in the background (blue status-bar indicator), so no "Always" prompt interrupts the tour start. No
+ * permission, failed or thrown -> BG_FAIL and false (ARCHITECTURE §9 row 14: the tour continues in the foreground).
  * iOS has no "continuous task cancelled/suspended" callbacks. The closest signal is an error delivered to the
  * location task (e.g. the permission revoked in Settings): it is logged BG_SUSPEND reason=LOCATION_ERROR and passed
  * to the listener's onSuspended(). The stopAudio hook still runs before every stop, as on HarmonyOS.
@@ -156,14 +157,14 @@ export class BackgroundRunner implements BackgroundPort {
       return false;
     }
     try {
-      const perm = await Location.requestBackgroundPermissionsAsync();
+      const perm = await Location.getForegroundPermissionsAsync();
       if (!perm.granted) {
-        Log.w(LogEvents.BG_FAIL, `where=requestBackgroundPermissions code=${perm.status} msg=always_not_granted`);
+        Log.w(LogEvents.BG_FAIL, `where=foregroundPermission code=${perm.status} msg=location_not_granted`);
         this.lastIssue = `BG_FAIL where=permission code=${perm.status}`;
         return false;
       }
     } catch (e) {
-      this.fail('requestBackgroundPermissions', e);
+      this.fail('foregroundPermission', e);
       return false;
     }
     try {
