@@ -63,3 +63,11 @@ confidential prompts.
 - **Bugs found and fixed:** the Developer page stole the tour's speech listener (tour stalled after one sentence;
   latent in the original); Now Walking named the planned target instead of the current stop when a real-GPS tour
   started mid-route (also in the original).
+- **Later the same night:** the home-screen widget showed only its placeholder. Cause: the ExtensionStorage pod needs
+  iOS 16.4, so with a 15.1 target it was never linked and the JS call no-oped while the log claimed success. Fixed
+  (target 16.4, honest `forms=0` log); verified by adding the widget on the simulator home screen (live Demo walk card).
+  Also verified: explore map with live position and place card, place detail, Settings, Polish UI switch, mid-tour
+  `LANG_SWITCH en→pl` continuing on Polish clips, the Tour ended summary.
+- **Still unverified:** the lock-screen Now Playing card (the session activates without error; the simulator does
+  not show it), haptics (no Taptic Engine), a long walk with the screen locked on a real device, and a real-GPS walk
+  with a moving location. CI (GitHub Actions, Ubuntu) runs the core, app, server and pipeline tests on every push.
