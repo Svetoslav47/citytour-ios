@@ -92,6 +92,8 @@ struct NextStopCardView: View {
         if card.demo == "1" {
           Text(card.simulatedLabel)
             .font(.system(size: 9, weight: .medium))
+            .lineLimit(1)
+            .fixedSize(horizontal: true, vertical: false)
             .foregroundColor(simFg)
             .padding(.horizontal, 6)
             .padding(.vertical, 2)

@@ -147,6 +147,11 @@ export class WidgetBridge {
     let forms = 0;
     try {
       const json = JSON.stringify(WidgetBridge.texts(c));
+      // The JS class silently no-ops without its native module (e.g. not linked): report that as a failed push.
+      const native = (globalThis as { expo?: { modules?: Record<string, unknown> } }).expo?.modules?.ExtensionStorage;
+      if (native === undefined) {
+        throw new Error('ExtensionStorage native module missing');
+      }
       const Storage = extensionStorageClass();
       if (WidgetBridge.storage === undefined) {
         WidgetBridge.storage = new Storage(WIDGET_APP_GROUP);
