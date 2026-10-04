@@ -420,16 +420,31 @@ export function DevPanel(): React.JSX.Element {
       // Between stories the tour is still "playing" while the loop runs; otherwise the card shows paused.
       AppContainer.mediaSession().setState(loopRef.current ? MediaPlayState.PLAY : MediaPlayState.PAUSE);
     };
+    // A running tour owns the speech and background listeners (the controller set them on start). Taking them here
+    // would leave the tour waiting for a UTT_DONE that never reaches it, so the page only observes during a tour.
+    let tourRunning = false;
     try {
-      AppContainer.background().setListener(new DevBgListener(() => {
-        stopLoop();
-        refreshPlatformLines();
-      }, () => refreshPlatformLines()));
+      tourRunning = AppContainer.tourController().isRunning();
+    } catch (e) {
+      tourRunning = false;
+    }
+    try {
+      if (!tourRunning) {
+        AppContainer.background().setListener(new DevBgListener(() => {
+          stopLoop();
+          refreshPlatformLines();
+        }, () => refreshPlatformLines()));
+      }
     } catch (e) {
       setBgLine(`bg: listener error ${Log.errKv(e)}`);
     }
     refreshPlatformLines();
     try {
+      if (tourRunning) {
+        refreshVoiceLines();
+        setStatus('tour running: samples off');
+        return () => undefined;
+      }
       AppContainer.speech().setListener(runner);
       refreshVoiceLines();
       AppContainer.speech().init().then((c: SpeechCapabilities) => {

@@ -252,7 +252,11 @@ export class NowWalkingViewModel {
     }
     this.totalStops = s.stops.length;
     this.stopNumber = Math.min(s.stops.length, Math.max(0, s.currentStopIdx) + 1);
-    const poiId = s.next !== undefined ? s.next.poiId : (this.currentStop()?.poiId ?? '');
+    // At a stop the hero names that stop (the original took s.next first, which names the planned target instead
+    // when a real-GPS tour starts mid-route, e.g. "STOP 6 · Barbican" at the Town Hall Tower).
+    const here = s.phase === TourPhase.AT_STOP ? this.currentStop() : undefined;
+    const poiId = here !== undefined ? here.poiId :
+      (s.next !== undefined ? s.next.poiId : (this.currentStop()?.poiId ?? ''));
     this.stopName = poiId === '' ? '' : poiName(pack, poiId, this.lang);
     const poi = poiId === '' ? undefined : safePoi(pack, poiId);
     this.lookUp = poi !== undefined && poi.view !== undefined && poi.view.look === LookDir.UP;
