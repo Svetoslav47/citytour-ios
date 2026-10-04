@@ -245,7 +245,8 @@ export class OnboardingViewModel {
       return false;
     }
     try {
-      return AppContainer.voiceManager().hasClips(lang);
+      // iOS: no system voice; stories are spoken from course clips or the server's studio voice.
+      return AppContainer.voiceManager().hasClips(lang) || AppContainer.remoteVoice().studioVoiceOffered(lang);
     } catch (e) {
       return false;
     }

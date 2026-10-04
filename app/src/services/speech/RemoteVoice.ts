@@ -145,6 +145,14 @@ export class RemoteVoice implements SpeechPort, RuntimeClipSource {
    * a course id to send, a language the server renders). Back-offs (offline / budget) are not checked: they are
    * per sentence, a cached line still plays offline, and such sentences fall back to text on the same pace.
    */
+  /**
+   * UI promise (Onboarding, Story language): stories in `lang` will be spoken in the studio voice once a walk is
+   * active (server configured and Online studio voice on). studioVoiceFor() additionally needs the active course.
+   */
+  studioVoiceOffered(lang: Lang): boolean {
+    return this.client.enabled() && this.toggle && (lang === Lang.EN || lang === Lang.PL || lang === Lang.ZH);
+  }
+
   studioVoiceFor(lang: Lang): boolean {
     return this.client.enabled() && this.toggle && this.courseIdOf() !== '' &&
       (lang === Lang.EN || lang === Lang.PL || lang === Lang.ZH);

@@ -250,7 +250,8 @@ export class SettingsViewModel {
   /** A13: Polish stories are spoken by the pre-rendered studio clips. */
   plSpoken(): boolean {
     try {
-      return AppContainer.voiceManager().hasClips(Lang.PL);
+      // iOS: course clips or the server's studio voice (no system voice).
+      return AppContainer.voiceManager().hasClips(Lang.PL) || AppContainer.remoteVoice().studioVoiceOffered(Lang.PL);
     } catch (e) {
       return false;
     }
