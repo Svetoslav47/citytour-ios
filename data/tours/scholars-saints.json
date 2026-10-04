@@ -1,0 +1,457 @@
+{
+  "$comment": "Human-curated source for the Scholars and Saints tour (course krakow-scholars; docs/research/new-tours.md §3). Same format as royal-route.json: id, personaId, titles, summaries, fixedStartPoiId, fixedEndPoiId, estMinutes and per-stop poiId, dwellS, prize, triggerRadiusM, approachRadiusM mirror contracts/Model.ets Tour/TourStop; per-stop wikidataId, kind, names, lat, lng and view {look, feature} feed the Poi records. courseId names the course this tour is built into (scripts/pack/lib/course.mjs). Every other key is review metadata and is not emitted. All values are agent drafts until a human confirms them.",
+  "id": "scholars-saints",
+  "courseId": "krakow-scholars",
+  "personaId": "historian",
+  "titles": {
+    "en": "Scholars and Saints",
+    "pl": "Uczeni i święci",
+    "zh": "学者与圣徒"
+  },
+  "summaries": {
+    "en": "Learning and faith in Kraków's Old Town: from the college where Copernicus studied to the window where John Paul II talked to the crowds. 10 stops, about 2.2 km on foot.",
+    "pl": "Nauka i wiara na krakowskim Starym Mieście: od kolegium, w którym studiował Kopernik, po okno, z którego Jan Paweł II rozmawiał z tłumami. 10 przystanków, około 2,2 km pieszo.",
+    "zh": "克拉科夫老城的学问与信仰之旅：从哥白尼求学的学院，到若望保禄二世向人群讲话的窗口。共10站，步行约2.2公里。"
+  },
+  "summariesReview": "en drafted by the agent from docs/research/new-tours.md §3; pl and zh are agent drafts not yet checked by a native speaker",
+  "namesSource": "Short display names curated for the app. pl: short local forms. zh: Wikidata zh labels (converted to simplified script, without the \"(克拉科夫)\" suffix) for stops 1-7; stops 8-10 have no zh label on Wikidata, so their zh names are agent drafts (docs/research/new-tours.md §3) that need a native check.",
+  "fixedStartPoiId": "poi_wd_Q2983000",
+  "fixedEndPoiId": "poi_wd_Q4865820",
+  "estMinutes": 52,
+  "estMinutesBasis": "OSRM foot, listed order, stop to stop: 2,242 m / 29.9 min (data/raw/tours/scholars-saints/osrm/stop-pairs-foot.json) + dwell 1290 s (21.5 min) = 51.4 min, rounded up.",
+  "coordinatesConfirmedBy": null,
+  "coordinateMethod": "lat/lng = Wikidata P625 (data/raw/wikidata/krakow-items.json.gz). Each stop is cross-checked against the centroid of the OSM element tagged with the same wikidata= in data/raw/osm/oldtown-tile*.osm.gz (way/relation: mean of the outline nodes). flag = more than 40 m apart (none).",
+  "radiiNote": "Draft values for review. 35 m trigger radius everywhere (narrow Old Town streets), approachRadiusM 110 (ARCHITECTURE default). Every radius exceeds the stop's OSRM snap distance. Collegium Novum and the Copernicus Monument are about 37 m apart and St Anne's and Collegium Maius about 43 m, so their circles overlap; the engine arms only the next planned stop.",
+  "stops": [
+    {
+      "n": 1,
+      "poiId": "poi_wd_Q2983000",
+      "wikidataId": "Q2983000",
+      "kind": "building",
+      "names": {
+        "en": "Collegium Novum",
+        "pl": "Collegium Novum",
+        "zh": "雅盖隆大学新学院"
+      },
+      "lat": 50.06083333,
+      "lng": 19.93305556,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "relation/214262",
+          "lat": 50.060935,
+          "lng": 19.933093,
+          "deltaM": 11.7
+        },
+        "osrmSnapM": 22.6,
+        "flag": false,
+        "note": "Wikidata and the OSM element agree within 20 m."
+      },
+      "dwellS": 120,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the Neo-Gothic front of the university's main building"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Collegium Novum",
+          "revid": 1362855230,
+          "quote": "The restoration of the Neo-Gothic architectural structure",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 2,
+      "poiId": "poi_wd_Q7029919",
+      "wikidataId": "Q7029919",
+      "kind": "monument",
+      "names": {
+        "en": "Copernicus Monument",
+        "pl": "Pomnik Mikołaja Kopernika",
+        "zh": "哥白尼纪念碑"
+      },
+      "lat": 50.06111111,
+      "lng": 19.93277778,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "node/273492033",
+          "lat": 50.061322,
+          "lng": 19.932756,
+          "deltaM": 23.5
+        },
+        "osrmSnapM": 5.5,
+        "flag": false,
+        "note": "OSM statue node (historic=memorial, artist Cyprian Godebski) 24 m from Wikidata. Wikidata kept; the 35 m circle contains the OSM node."
+      },
+      "dwellS": 90,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the young astronomer, shown as a student of the university"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Pomnik Mikołaja Kopernika w Krakowie",
+          "revid": 79769923,
+          "quote": "by posąg przedstawiał astronoma jako studenta uczelni",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 3,
+      "poiId": "poi_wd_Q1126134",
+      "wikidataId": "Q1126134",
+      "kind": "church",
+      "names": {
+        "en": "St Anne's Church",
+        "pl": "Kościół św. Anny",
+        "zh": "圣安妮教堂"
+      },
+      "lat": 50.0620887,
+      "lng": 19.9337652,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39357541",
+          "lat": 50.062313,
+          "lng": 19.933469,
+          "deltaM": 32.7
+        },
+        "osrmSnapM": 1.7,
+        "flag": false,
+        "note": "OSM building centroid 33 m from Wikidata (a large church; the centroid lies inside the nave). Wikidata kept."
+      },
+      "dwellS": 120,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the Baroque church modelled on Sant'Andrea della Valle in Rome"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Church of St. Anne, Kraków",
+          "revid": 1362854501,
+          "quote": "modelled on Sant'Andrea della Valle in Rome",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 4,
+      "poiId": "poi_wd_Q919596",
+      "wikidataId": "Q919596",
+      "kind": "building",
+      "names": {
+        "en": "Collegium Maius",
+        "pl": "Collegium Maius",
+        "zh": "克拉科夫大学院"
+      },
+      "lat": 50.061704,
+      "lng": 19.933791,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "relation/214263",
+          "lat": 50.061629,
+          "lng": 19.933598,
+          "deltaM": 16.1
+        },
+        "osrmSnapM": 9.5,
+        "flag": false,
+        "note": "Wikidata and the OSM element agree within 20 m."
+      },
+      "dwellS": 180,
+      "prize": 5,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the arcaded courtyard where the professors lived"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Collegium Maius, Kraków",
+          "revid": 1354364199,
+          "quote": "a large courtyard bordered with arcades",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 5,
+      "poiId": "poi_wd_Q616675",
+      "wikidataId": "Q616675",
+      "kind": "building",
+      "names": {
+        "en": "Bishop's Palace",
+        "pl": "Pałac Biskupi",
+        "zh": "主教宫"
+      },
+      "lat": 50.05954,
+      "lng": 19.93513,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/263169972",
+          "lat": 50.059777,
+          "lng": 19.935079,
+          "deltaM": 26.6
+        },
+        "osrmSnapM": 2.5,
+        "flag": false,
+        "note": "OSM building centroid 27 m from Wikidata (a large palace). Wikidata kept."
+      },
+      "dwellS": 150,
+      "prize": 5,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the papal window above the main entrance"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Bishop's Palace, Kraków",
+          "revid": 1364123457,
+          "quote": "The window above the entrance is known as the \"papal window,\"",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 6,
+      "poiId": "poi_wd_Q1328725",
+      "wikidataId": "Q1328725",
+      "kind": "church",
+      "names": {
+        "en": "Franciscan Basilica",
+        "pl": "Bazylika Franciszkanów",
+        "zh": "圣方济各圣殿"
+      },
+      "lat": 50.059128,
+      "lng": 19.935725,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/200358351",
+          "lat": 50.059254,
+          "lng": 19.936121,
+          "deltaM": 31.6
+        },
+        "osrmSnapM": 8.1,
+        "flag": false,
+        "note": "OSM building centroid 32 m from Wikidata (a large basilica; the centroid lies inside the building). Wikidata kept."
+      },
+      "dwellS": 180,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the tall brick and sandstone walls of the old church"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Basilica of St. Francis of Assisi, Kraków",
+          "revid": 1354747267,
+          "quote": "one of the first tall brick-and-sandstone buildings in the city",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 7,
+      "poiId": "poi_wd_Q1237964",
+      "wikidataId": "Q1237964",
+      "kind": "church",
+      "names": {
+        "en": "Dominican Basilica",
+        "pl": "Bazylika Dominikanów",
+        "zh": "天主圣三圣殿"
+      },
+      "lat": 50.0593,
+      "lng": 19.93955,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/243432610",
+          "lat": 50.059278,
+          "lng": 19.939385,
+          "deltaM": 12.0
+        },
+        "osrmSnapM": 22.6,
+        "flag": false,
+        "note": "Wikidata and the OSM element agree within 20 m."
+      },
+      "dwellS": 150,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the Gothic portal of the main entrance, inside its later porch"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Kościół Świętej Trójcy w Krakowie (ul. Stolarska)",
+          "revid": 80814545,
+          "quote": "Osłaniała ona gotycki, XIV-wieczny portal głównego wejścia",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 8,
+      "poiId": "poi_wd_Q11746949",
+      "wikidataId": "Q11746949",
+      "kind": "church",
+      "names": {
+        "en": "St Joseph's Church",
+        "pl": "Kościół św. Józefa",
+        "zh": "圣若瑟堂"
+      },
+      "lat": 50.05812,
+      "lng": 19.93976,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39365371",
+          "lat": 50.05809,
+          "lng": 19.939728,
+          "deltaM": 4.0
+        },
+        "osrmSnapM": 23.7,
+        "flag": false,
+        "note": "Wikidata and the OSM element agree within 20 m."
+      },
+      "dwellS": 90,
+      "prize": 2,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the courtyard wall with its three small gates"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Kościół św. Józefa w Krakowie (ul. Poselska)",
+          "revid": 80813675,
+          "quote": "zamknięty jest neorenesansowym murem, dekorowanym boniowaniem z trzema bramkami",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 9,
+      "poiId": "poi_wd_Q11691320",
+      "wikidataId": "Q11691320",
+      "kind": "building",
+      "names": {
+        "en": "Collegium Iuridicum",
+        "pl": "Collegium Iuridicum",
+        "zh": "雅盖隆大学法学院旧楼"
+      },
+      "lat": 50.05706,
+      "lng": 19.93783,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39357559",
+          "lat": 50.057085,
+          "lng": 19.937853,
+          "deltaM": 3.2
+        },
+        "osrmSnapM": 14.3,
+        "flag": false,
+        "note": "Wikidata and the OSM element agree within 20 m."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the two storeys of arcades around the courtyard"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Collegium Iuridicum Uniwersytetu Jagiellońskiego",
+          "revid": 73630347,
+          "quote": "z dwukondygnacyjnym dziedzińcem arkadowym",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 10,
+      "poiId": "poi_wd_Q4865820",
+      "wikidataId": "Q4865820",
+      "kind": "building",
+      "names": {
+        "en": "Nowodworski School",
+        "pl": "Liceum Nowodworskiego",
+        "zh": "诺沃德沃尔斯基中学"
+      },
+      "lat": 50.05705,
+      "lng": 19.93342,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/692834133",
+          "lat": 50.057228,
+          "lng": 19.933217,
+          "deltaM": 24.5
+        },
+        "osrmSnapM": 11.8,
+        "flag": false,
+        "note": "OSM building centroid 25 m from Wikidata (a large school building). Wikidata kept."
+      },
+      "dwellS": 90,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the school building of 1898 on Plac na Groblach"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Bartłomiej Nowodoworski 1st Secondary School in Kraków",
+          "revid": 1364577096,
+          "quote": "moved to its present building in Plac na Groblach",
+          "file": "data/raw/tours/scholars-saints/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    }
+  ]
+}

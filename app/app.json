@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "CityTour",
+    "slug": "citytour",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "citytour",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.hackyeah.citytour.ios",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "CityTour uses your location to tell you about a place when you reach it and to guide you to the next stop.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "CityTour keeps following your walk while the screen is off, so stories still start when you reach a stop.",
+        "UIBackgroundModes": ["location", "audio"],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "com.apple.security.application-groups": ["group.com.hackyeah.citytour.ios"]
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": { "backgroundColor": "#000000" }
+        }
+      ],
+      ["expo-audio", { "microphonePermission": false }],
+      "expo-localization",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "CityTour uses your location to tell you about a place when you reach it and to guide you to the next stop.",
+          "locationAlwaysAndWhenInUsePermission": "CityTour keeps following your walk while the screen is off, so stories still start when you reach a stop.",
+          "isIosBackgroundLocationEnabled": true
+        }
+      ],
+      "expo-notifications",
+      "expo-task-manager",
+      "@bacons/apple-targets",
+      ["expo-build-properties", { "ios": { "deploymentTarget": "15.1" } }]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

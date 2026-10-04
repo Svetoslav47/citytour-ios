@@ -1,0 +1,101 @@
+{
+ "validatorVersion": 1,
+ "summary": {
+  "narrations": 12912,
+  "pass": 12912,
+  "fallback": 0,
+  "dropped": 0,
+  "rejectedCandidates": 0,
+  "failuresByCheck": {
+   "schema": 0,
+   "length": 0,
+   "sentence_length": 0,
+   "extract_size": 0,
+   "total_chars": 0,
+   "lang": 0,
+   "numbers": 0,
+   "proper_nouns": 0,
+   "claims_quote": 0,
+   "forbidden": 0
+  }
+ },
+ "counts": {
+  "en": {
+   "reviewed": 0,
+   "grounded-ai": 25,
+   "source-extract": 220,
+   "name-only": 4059
+  },
+  "pl": {
+   "reviewed": 0,
+   "grounded-ai": 25,
+   "source-extract": 298,
+   "name-only": 3981
+  },
+  "zh": {
+   "reviewed": 0,
+   "grounded-ai": 25,
+   "source-extract": 74,
+   "name-only": 4205
+  },
+  "narrationsPerLength": {
+   "en:deep": 3,
+   "en:full": 11,
+   "en:teaser": 4290,
+   "pl:deep": 3,
+   "pl:full": 11,
+   "pl:teaser": 4290,
+   "zh:deep": 3,
+   "zh:full": 11,
+   "zh:teaser": 4290
+  },
+  "poisPerTier": {
+   "grounded-ai": 11,
+   "name-only": 3978,
+   "source-extract": 301
+  },
+  "poisPerKind": {
+   "building": 1904,
+   "castle": 161,
+   "church": 287,
+   "gate": 27,
+   "monument": 135,
+   "museum": 110,
+   "other": 1599,
+   "plaque": 2,
+   "square": 36,
+   "synagogue": 29
+  }
+ },
+ "failures": [],
+ "dropped": [],
+ "build": {
+  "builtAt": "2026-10-03T21:30:23Z",
+  "validatorVersion": 1,
+  "drafts": 75,
+  "poisExcluded": {
+   "city": 1,
+   "outsideBox": 5,
+   "noName": 4,
+   "transitOnly": 49
+  },
+  "poisMerged": 16,
+  "registerPolygons": 2084,
+  "map": {
+   "ways": 6108,
+   "relations": 37,
+   "openRings": 1,
+   "droppedTiny": 20,
+   "features": {
+    "water": 5,
+    "river": 2,
+    "green": 1139,
+    "unesco": 1,
+    "buildings": 1914,
+    "paths": 2093,
+    "minor": 867,
+    "major": 129
+   }
+  }
+ }
+}

@@ -1,0 +1,535 @@
+{
+  "$comment": "Human-curated source for the Kazimierz tour (course krakow-kazimierz, docs/research/new-tours.md §2). Same format as royal-route.json: tour-level id, personaId, titles, summaries, fixedStartPoiId, fixedEndPoiId, estMinutes and per-stop poiId, dwellS, prize, triggerRadiusM, approachRadiusM mirror contracts/Model.ets Tour/TourStop; per-stop wikidataId, kind, names, lat, lng and view {look, feature} feed the Poi records. Review-only keys (not emitted): $comment, courseId, mapArea, sourceQids, summariesReview, namesSource, estMinutesBasis, coordinatesConfirmedBy, coordinateMethod, radiiNote, toneNote, n, sensitive, coordinateSource, coordinateCheck, view.basis, view.review. view.feature pl/zh are the translated view hints of the review files (translate-v1). Coordinates, radii, dwell times, prizes and view hints are agent drafts until a human confirms them.",
+  "id": "kazimierz",
+  "courseId": "krakow-kazimierz",
+  "mapArea": "kazimierz",
+  "sourceQids": [
+    "Q194616",
+    "Q115001",
+    "Q9366047"
+  ],
+  "personaId": "historian",
+  "titles": {
+    "en": "Kazimierz: Two Faiths, One Town",
+    "pl": "Kazimierz: dwie wiary, jedno miasto",
+    "zh": "卡齐米日：一城两信"
+  },
+  "summaries": {
+    "en": "King Casimir's royal town of Kazimierz, where Catholic Kraków and one of Poland's oldest Jewish quarters lived side by side for five centuries: from the church on the Rock past the old town hall and Plac Nowy to the synagogues around Szeroka Street. The synagogues and the old cemetery are places of worship and remembrance. 11 stops, about 2 km on foot.",
+    "pl": "Królewskie miasto Kazimierza Wielkiego, w którym katolicki Kraków i jedna z najstarszych dzielnic żydowskich w Polsce przez pięć wieków żyły obok siebie: od kościoła na Skałce przez dawny ratusz i plac Nowy do synagog wokół ulicy Szerokiej. Synagogi i stary cmentarz to miejsca modlitwy i pamięci. 11 przystanków, około 2 km pieszo.",
+    "zh": "卡齐米日大帝建立的王家城镇：五个世纪里，天主教的克拉科夫与波兰最古老的犹太街区之一在这里比邻而居。从岩石上的教堂出发，经过旧市政厅和新广场，直到宽街周围的犹太会堂。犹太会堂和老墓地是祈祷与纪念之地。共11站，步行约2公里。"
+  },
+  "summariesReview": "en drafted by the agent; pl and zh are agent drafts not yet checked by a native speaker",
+  "namesSource": "Short display names curated for the app. zh follows the Wikidata labels converted to simplified script (庫帕猶太會堂 -> 库帕犹太会堂, 萊姆猶太會堂 -> 莱姆犹太会堂, 沃爾夫·波佩猶太會堂 -> 沃尔夫·波佩犹太会堂, 舊猶太會堂 -> 旧犹太会堂); stops 2, 3 and 5 have no zh label: 圣加大利纳教堂, 卡齐米日市政厅, 新广场 are drafts (docs/research/new-tours.md §2) to be checked by a native speaker.",
+  "fixedStartPoiId": "poi_wd_Q1420580",
+  "fixedEndPoiId": "poi_wd_Q3502453",
+  "estMinutes": 57,
+  "estMinutesBasis": "OSRM foot, listed order, stop to stop: 2,151 m / 28.8 min (data/raw/tours/kazimierz/osrm/stop-pairs-foot.json) + dwell 1680 s (28 min) = 56.8 min, rounded up to 57. The listed order is the exact optimum for the fixed start and end (docs/research/new-tours.md §2).",
+  "coordinatesConfirmedBy": null,
+  "coordinateMethod": "lat/lng = Wikidata P625. Each stop is cross-checked against the centroid of the OSM element tagged with the same wikidata= in the krakow-kazimierz map tiles (data/raw/osm/oldtown-tile{1..3} + kazimierz-tile{1..5}); osrmSnapM = distance OSRM moved the point to the nearest walkable way (data/raw/tours/kazimierz/osrm/stops-table-foot.json). flag = OSM element more than 40 m away.",
+  "radiiNote": "Draft values for review. Default 35 m; 40-45 m where OSRM snaps more than 25 m or the building is large; Plac Nowy 50 m (square). Every radius exceeds the stop's OSRM snap distance. The synagogues on Szeroka are 108-140 m apart, so the circles do not overlap; approachRadiusM 110 (ARCHITECTURE default).",
+  "toneNote": "Stops 6-11 (the synagogues) cover the Holocaust and the post-war Kraków pogrom. Scripts are factual and respectful: no jokes, no exclamation marks, no trivia framing, no prize language in narration (docs/research/new-tours.md §2.2; enforced by the tone rule of scripts/pack/review/check-drafts.mjs for this course). prize is for planning only.",
+  "stops": [
+    {
+      "n": 1,
+      "poiId": "poi_wd_Q1420580",
+      "wikidataId": "Q1420580",
+      "kind": "church",
+      "names": {
+        "en": "Skałka",
+        "pl": "Skałka",
+        "zh": "圣弥额尔圣达尼老圣殿"
+      },
+      "lat": 50.048333333,
+      "lng": 19.937777777,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/33291026",
+          "lat": 50.048198,
+          "lng": 19.937601,
+          "deltaM": 19.6
+        },
+        "osrmSnapM": 11.6,
+        "flag": false,
+        "note": "Wikidata point is on the church; OSM church way centroid 20 m away."
+      },
+      "dwellS": 180,
+      "prize": 5,
+      "triggerRadiusM": 45,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the Well of Saint Stanislaus outside the church",
+          "pl": "studnia świętego Stanisława przed kościołem",
+          "zh": "教堂外面的圣斯坦尼斯瓦夫之井"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Church of St. Michael the Archangel and St. Stanislaus Bishop and Martyr, Kraków",
+          "revid": 1377054501,
+          "quote": "Outside the church is the Well of Saint Stanislaus.",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 2,
+      "poiId": "poi_wd_Q11746976",
+      "wikidataId": "Q11746976",
+      "kind": "church",
+      "names": {
+        "en": "St Catherine's Church",
+        "pl": "Kościół św. Katarzyny",
+        "zh": "圣加大利纳教堂"
+      },
+      "lat": 50.0494,
+      "lng": 19.9411,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39243627",
+          "lat": 50.049265,
+          "lng": 19.941111,
+          "deltaM": 15
+        },
+        "osrmSnapM": 28.6,
+        "flag": false,
+        "note": "Wikidata point (4 decimals) is inside the church; OSRM snaps 29 m to Skałeczna/Augustiańska, so the radius is 40 m."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 40,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the late Gothic porch with its two richly carved stone portals",
+          "pl": "późnogotycka kruchta z dwoma bogato rzeźbionymi kamiennymi portalami",
+          "zh": "晚期哥特式门廊和两扇雕刻精美的石门"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Kościół św. Katarzyny Aleksandryjskiej i św. Małgorzaty w Krakowie",
+          "revid": 80843785,
+          "quote": "późnogotycka kruchta z dwoma portalami o bogatej kamiennej dekoracji rzeźbiarskiej",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 3,
+      "poiId": "poi_wd_Q15880176",
+      "wikidataId": "Q15880176",
+      "kind": "building",
+      "names": {
+        "en": "Kazimierz Town Hall",
+        "pl": "Ratusz kazimierski",
+        "zh": "卡齐米日市政厅"
+      },
+      "lat": 50.048694,
+      "lng": 19.943472,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39243490",
+          "lat": 50.048633,
+          "lng": 19.943516,
+          "deltaM": 7.5
+        },
+        "osrmSnapM": 11.1,
+        "flag": false,
+        "note": "Town hall on Plac Wolnica (today the Ethnographic Museum, Q194616)."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 40,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the clock on the town hall tower",
+          "pl": "zegar na wieży ratusza",
+          "zh": "市政厅塔楼上的时钟"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Ratusz kazimierski w Krakowie",
+          "revid": 78708700,
+          "quote": "zegar wieżowy, ufundowany przez kazimierską Radę Miejską, który funkcjonuje do dzisiaj",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 4,
+      "poiId": "poi_wd_Q2084317",
+      "wikidataId": "Q2084317",
+      "kind": "church",
+      "names": {
+        "en": "Corpus Christi Basilica",
+        "pl": "Bazylika Bożego Ciała",
+        "zh": "基督圣体圣殿"
+      },
+      "lat": 50.049791666,
+      "lng": 19.944936111,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/33291029",
+          "lat": 50.049816,
+          "lng": 19.94496,
+          "deltaM": 3.2
+        },
+        "osrmSnapM": 17.6,
+        "flag": false,
+        "note": "Large church plot; 45 m covers the street front on Bożego Ciała."
+      },
+      "dwellS": 180,
+      "prize": 4,
+      "triggerRadiusM": 45,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the tall Gothic walls of the basilica",
+          "pl": "wysokie gotyckie mury bazyliki",
+          "zh": "圣殿高耸的哥特式墙体"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Corpus Christi Church, Kraków",
+          "revid": 1354583838,
+          "quote": "The a Gothic church was founded by King Casimir III the Great in 1335.",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 5,
+      "poiId": "poi_wd_Q11008519",
+      "wikidataId": "Q11008519",
+      "kind": "square",
+      "names": {
+        "en": "Plac Nowy",
+        "pl": "Plac Nowy",
+        "zh": "新广场"
+      },
+      "lat": 50.0517,
+      "lng": 19.9449,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "relation/3915088",
+          "lat": 50.051713,
+          "lng": 19.944946,
+          "deltaM": 3.6
+        },
+        "osrmSnapM": 10.9,
+        "flag": false,
+        "note": "Square: 50 m radius around the centre (the round hall)."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 50,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the round market hall in the middle of the square",
+          "pl": "okrągła hala targowa pośrodku placu",
+          "zh": "广场中央的圆形市场大厅"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Plac Nowy w Krakowie",
+          "revid": 77840996,
+          "quote": "Na środku placu znajduje się tzw. okrąglak",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 6,
+      "poiId": "poi_wd_Q3354482",
+      "wikidataId": "Q3354482",
+      "kind": "synagogue",
+      "sensitive": true,
+      "names": {
+        "en": "Tempel Synagogue",
+        "pl": "Synagoga Tempel",
+        "zh": "圣殿会堂"
+      },
+      "lat": 50.052917,
+      "lng": 19.944444,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39405479",
+          "lat": 50.052911,
+          "lng": 19.94435,
+          "deltaM": 6.7
+        },
+        "osrmSnapM": 13.8,
+        "flag": false,
+        "note": "Wikidata point on the synagogue, on Miodowa."
+      },
+      "dwellS": 150,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the tall central section between its lower wings",
+          "pl": "wysoka część środkowa między niższymi skrzydłami",
+          "zh": "建筑中央高耸的部分和两侧较低的侧翼"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Tempel Synagogue (Kraków)",
+          "revid": 1372444838,
+          "quote": "with its tall central section flanked by lower wings",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 7,
+      "poiId": "poi_wd_Q3507991",
+      "wikidataId": "Q3507991",
+      "kind": "synagogue",
+      "sensitive": true,
+      "names": {
+        "en": "Kupa Synagogue",
+        "pl": "Synagoga Kupa",
+        "zh": "库帕犹太会堂"
+      },
+      "lat": 50.05263,
+      "lng": 19.94575,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39405481",
+          "lat": 50.052636,
+          "lng": 19.945708,
+          "deltaM": 3.1
+        },
+        "osrmSnapM": 12.7,
+        "flag": false,
+        "note": "Kupa and Remuh are 108 m apart; 35 m circles do not overlap."
+      },
+      "dwellS": 120,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the wall where the synagogue meets the remnants of the medieval town wall",
+          "pl": "miejsce, w którym synagoga styka się z resztkami średniowiecznego muru miejskiego",
+          "zh": "会堂与中世纪城墙残垣相接的地方"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Kupa Synagogue",
+          "revid": 1366939000,
+          "quote": "The northern wall of the former synagogue connected with the remnants of the medieval city-wall",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 8,
+      "poiId": "poi_wd_Q3109262",
+      "wikidataId": "Q3109262",
+      "kind": "synagogue",
+      "sensitive": true,
+      "names": {
+        "en": "Izaak Synagogue",
+        "pl": "Synagoga Izaaka",
+        "zh": "以撒会堂"
+      },
+      "lat": 50.05166667,
+      "lng": 19.94666667,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/39405483",
+          "lat": 50.051655,
+          "lng": 19.94663,
+          "deltaM": 2.9
+        },
+        "osrmSnapM": 13.3,
+        "flag": false,
+        "note": "Wikidata point on the synagogue, on Kupa Street."
+      },
+      "dwellS": 150,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the women's gallery and the outside stairs that lead up to it",
+          "pl": "galeria dla kobiet i prowadzące do niej zewnętrzne schody",
+          "zh": "女性区和通往那里的室外楼梯"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Izaak Synagogue",
+          "revid": 1374081816,
+          "quote": "The women's gallery and exterior stairs leading to it are a later addition to the building.",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 9,
+      "poiId": "poi_wd_Q3618",
+      "wikidataId": "Q3618",
+      "kind": "synagogue",
+      "sensitive": true,
+      "names": {
+        "en": "Remuh Synagogue",
+        "pl": "Synagoga Remu",
+        "zh": "莱姆犹太会堂"
+      },
+      "lat": 50.05267222,
+      "lng": 19.94725833,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/33291034",
+          "lat": 50.052659,
+          "lng": 19.947328,
+          "deltaM": 5.2
+        },
+        "osrmSnapM": 32.9,
+        "flag": false,
+        "note": "OSRM snaps 33 m (the synagogue stands back from Szeroka behind its courtyard), so the radius is 40 m; Popper is 112 m away."
+      },
+      "dwellS": 180,
+      "prize": 5,
+      "triggerRadiusM": 40,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the old gravestones of the cemetery beside the synagogue",
+          "pl": "stare macewy cmentarza obok synagogi",
+          "zh": "会堂旁边墓地里的古老墓碑"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Remah Synagogue",
+          "revid": 1366935946,
+          "quote": "at the edge of a newly established Jewish cemetery",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 10,
+      "poiId": "poi_wd_Q3511288",
+      "wikidataId": "Q3511288",
+      "kind": "synagogue",
+      "sensitive": true,
+      "names": {
+        "en": "Popper Synagogue",
+        "pl": "Synagoga Poppera",
+        "zh": "沃尔夫·波佩犹太会堂"
+      },
+      "lat": 50.052416666,
+      "lng": 19.948805555,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/152104744",
+          "lat": 50.052401,
+          "lng": 19.948788,
+          "deltaM": 2.1
+        },
+        "osrmSnapM": 7.5,
+        "flag": false,
+        "note": "On Szeroka; Old Synagogue is 117 m away."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the entrance, where carved doors with four animals once stood",
+          "pl": "wejście, w którym stały kiedyś rzeźbione drzwi z czterema zwierzętami",
+          "zh": "曾经装着刻有四种动物大门的入口"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Wolf Popper Synagogue",
+          "revid": 1366934450,
+          "quote": "Its entrance was once adorned with openwork doors depicting four animals",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 11,
+      "poiId": "poi_wd_Q3502453",
+      "wikidataId": "Q3502453",
+      "kind": "synagogue",
+      "sensitive": true,
+      "names": {
+        "en": "Old Synagogue",
+        "pl": "Synagoga Stara",
+        "zh": "旧犹太会堂"
+      },
+      "lat": 50.051392,
+      "lng": 19.948572,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "osm": {
+          "element": "way/152104775",
+          "lat": 50.051342,
+          "lng": 19.948598,
+          "deltaM": 5.9
+        },
+        "osrmSnapM": 14.5,
+        "flag": false,
+        "note": "End of the walk, at the south end of Szeroka; 40 m covers the front on the street."
+      },
+      "dwellS": 240,
+      "prize": 5,
+      "triggerRadiusM": 40,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the attic wall with its loopholes",
+          "pl": "attyka ze strzelnicami",
+          "zh": "带射击孔的女儿墙"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Old Synagogue (Kraków)",
+          "revid": 1366936524,
+          "quote": "the attic wall with loopholes",
+          "file": "data/raw/tours/kazimierz/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    }
+  ]
+}

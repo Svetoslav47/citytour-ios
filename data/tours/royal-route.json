@@ -1,0 +1,565 @@
+{
+  "$comment": "Human-curated source for the Royal Route tour (task B1). Tour-level id, personaId, titles, summaries, fixedStartPoiId, fixedEndPoiId, estMinutes and per-stop poiId, dwellS, prize, triggerRadiusM, approachRadiusM mirror contracts/Model.ets Tour/TourStop; per-stop wikidataId, kind, names, lat, lng and view {look, feature} feed the Poi records in the pack build (B2). Every other key is review metadata for humans and is not emitted: $comment, summariesReview, namesSource, estMinutesBasis, coordinatesConfirmedBy, coordinateMethod, radiiNote, n, coordinateSource, coordinateCheck, view.basis, view.review. Coordinates, radii, dwell times, prizes and view hints are agent drafts until a human confirms them (coordinatesConfirmedBy, view.review).",
+  "id": "royal-route",
+  "personaId": "historian",
+  "titles": {
+    "en": "The Royal Route",
+    "pl": "Droga Królewska",
+    "zh": "皇家之路"
+  },
+  "summaries": {
+    "en": "The classic Royal Route through Kraków's Old Town: from the Barbican and St Florian's Gate across the Main Market Square, then along Grodzka and Kanonicza streets up to Wawel Hill. 11 stops, about 2 km on foot.",
+    "pl": "Klasyczna Droga Królewska przez Stare Miasto w Krakowie: od Barbakanu i Bramy Floriańskiej przez Rynek Główny, a dalej ulicami Grodzką i Kanoniczą aż na Wawel. 11 przystanków, około 2 km pieszo.",
+    "zh": "穿越克拉科夫老城的经典皇家之路：从瓮城和圣福里安门出发，穿过中央集市广场，再沿格罗兹卡街和咏祷司铎街走上瓦维尔山。共11站，步行约2公里。"
+  },
+  "summariesReview": "en drafted by the agent; pl and zh are agent drafts not yet checked by a native speaker",
+  "namesSource": "Short display names curated for the app; pl and zh follow the Wikidata labels (zh label without the \"(克拉科夫)\" disambiguation suffix).",
+  "fixedStartPoiId": "poi_wd_Q807309",
+  "fixedEndPoiId": "poi_wd_Q743704",
+  "estMinutes": 55,
+  "estMinutesBasis": "OSRM foot, listed order, stop to stop: 2,048 m / 27.4 min (data/raw/osrm/stop-pairs-foot.json) + dwell 1620 s (27 min) = 54.4 min, rounded up to 55. The lead's map-meta.json route (2,497 m / 33 min) is longer because its pins sit on the walking network, not at the buildings.",
+  "coordinatesConfirmedBy": null,
+  "coordinateMethod": "lat/lng = Wikidata P625 unless coordinateSource says otherwise. Each stop is cross-checked against (a) its pin in docs/design/map/map-meta.json, converted linearly with that file's image bbox [19.929, 50.0525, 19.947, 50.0675] and 1000x1289 px size, and (b) the centroid of the OSM element tagged with the same wikidata= in data/raw/osm/oldtown-tile*.osm.gz. flag = map pin more than 40 m away; the note explains each flag.",
+  "radiiNote": "Draft values for review. Default 35 m; Main Square (Rynek) stops 50-70 m; Wawel 60 m (ARCHITECTURE: Wawel courtyard 60); approachRadiusM 110 (ARCHITECTURE default). Every radius exceeds the stop's OSRM snap distance (coordinateCheck.osrmSnapM, distance to the nearest walkable way). The Rynek circles overlap (Cloth Hall 70 m and the Mickiewicz Monument 50 m are 31 m apart), so the engine must arm only the next planned stop.",
+  "stops": [
+    {
+      "n": 1,
+      "poiId": "poi_wd_Q807309",
+      "wikidataId": "Q807309",
+      "kind": "gate",
+      "names": {
+        "en": "Barbican",
+        "pl": "Barbakan",
+        "zh": "克拉科夫瓮城"
+      },
+      "lat": 50.06553056,
+      "lng": 19.94165556,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Barbican",
+          "lat": 50.0655,
+          "lng": 19.941701,
+          "deltaM": 4.7
+        },
+        "osm": {
+          "element": "relation/13562708",
+          "lat": 50.065495,
+          "lng": 19.941601,
+          "deltaM": 5.5
+        },
+        "osrmSnapM": 14.5,
+        "flag": false,
+        "note": "All three references agree within 6 m."
+      },
+      "dwellS": 120,
+      "prize": 4,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the seven turrets that crown the round brick walls"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Kraków Barbican",
+          "revid": 1364368996,
+          "quote": "seven turrets",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 2,
+      "poiId": "poi_wd_Q1363724",
+      "wikidataId": "Q1363724",
+      "kind": "gate",
+      "names": {
+        "en": "St Florian's Gate",
+        "pl": "Brama Floriańska",
+        "zh": "圣福里安门"
+      },
+      "lat": 50.06472222,
+      "lng": 19.94138889,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "St Florian's Gate",
+          "lat": 50.0648,
+          "lng": 19.9416,
+          "deltaM": 17.4
+        },
+        "osm": {
+          "element": "way/39357538",
+          "lat": 50.064852,
+          "lng": 19.941351,
+          "deltaM": 14.7
+        },
+        "osrmSnapM": 8.0,
+        "flag": false,
+        "note": "Wikidata, OSM outline and map pin agree within 18 m."
+      },
+      "dwellS": 90,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the stone relief of St Florian on the gate tower"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "St. Florian's Gate",
+          "revid": 1348551661,
+          "quote": "adorned with an 18th-century bas-relief of St. Florian",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 3,
+      "poiId": "poi_wd_Q1143171",
+      "wikidataId": "Q1143171",
+      "kind": "church",
+      "names": {
+        "en": "St Mary's Basilica",
+        "pl": "Bazylika Mariacka",
+        "zh": "圣母圣殿"
+      },
+      "lat": 50.061666666,
+      "lng": 19.939166666,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "St Mary's Basilica",
+          "lat": 50.0616,
+          "lng": 19.9394,
+          "deltaM": 18.2
+        },
+        "osm": {
+          "element": "way/26195267",
+          "lat": 50.06164,
+          "lng": 19.939471,
+          "deltaM": 21.9
+        },
+        "osrmSnapM": 28.1,
+        "flag": false,
+        "note": "Wikidata point is inside the basilica; the map pin is 18 m away on Plac Mariacki. The 60 m radius covers the west front on the square."
+      },
+      "dwellS": 240,
+      "prize": 5,
+      "triggerRadiusM": 60,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the taller of the two towers, where the bugle call (hejnał) is played every hour"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Church of the Assumption of the Blessed Virgin Mary, Kraków",
+          "revid": 1364219132,
+          "quote": "is played from the top of the taller of Saint Mary",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 4,
+      "poiId": "poi_wd_Q1072350",
+      "wikidataId": "Q1072350",
+      "kind": "building",
+      "names": {
+        "en": "Cloth Hall",
+        "pl": "Sukiennice",
+        "zh": "纺织会馆"
+      },
+      "lat": 50.061678,
+      "lng": 19.937384,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Cloth Hall",
+          "lat": 50.0617,
+          "lng": 19.9373,
+          "deltaM": 6.5
+        },
+        "osm": {
+          "element": "way/23256528",
+          "lat": 50.06168,
+          "lng": 19.937346,
+          "deltaM": 2.7
+        },
+        "osrmSnapM": 1.2,
+        "flag": false,
+        "note": "Wikidata point is the middle of the building (OSM outline centroid 3 m away). The hall is about 100 m long, hence the 70 m radius."
+      },
+      "dwellS": 180,
+      "prize": 4,
+      "triggerRadiusM": 70,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the Renaissance parapet with carved masks along the roof line"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Sukiennice w Krakowie",
+          "revid": 80078627,
+          "quote": "attyką o podziałach arkadowych i grzebieniu z maszkaronami projektu Santi Gucciego",
+          "file": "data/raw/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 5,
+      "poiId": "poi_wd_Q348381",
+      "wikidataId": "Q348381",
+      "kind": "monument",
+      "names": {
+        "en": "Adam Mickiewicz Monument",
+        "pl": "Pomnik Adama Mickiewicza",
+        "zh": "亚当·米茨凯维奇纪念碑"
+      },
+      "lat": 50.061388888,
+      "lng": 19.937777777,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Adam Mickiewicz Monument",
+          "lat": 50.0614,
+          "lng": 19.9384,
+          "deltaM": 44.4
+        },
+        "osm": {
+          "element": "way/374515883",
+          "lat": 50.061468,
+          "lng": 19.937993,
+          "deltaM": 17.7
+        },
+        "osrmSnapM": 7.7,
+        "flag": true,
+        "note": "FLAG 44 m: the map pin sits on the path network about 30 m east of the monument outline in OSM. Wikidata agrees with the OSM outline within 18 m, so Wikidata is kept."
+      },
+      "dwellS": 90,
+      "prize": 3,
+      "triggerRadiusM": 50,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the poet's statue on top, above the four allegorical groups around the base"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Adam Mickiewicz Monument, Kraków",
+          "revid": 1361283219,
+          "quote": "At the poet's feet are four allegoric groups",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 6,
+      "poiId": "poi_wd_Q1786361",
+      "wikidataId": "Q1786361",
+      "kind": "building",
+      "names": {
+        "en": "Town Hall Tower",
+        "pl": "Wieża Ratuszowa",
+        "zh": "市政厅钟楼"
+      },
+      "lat": 50.06147222,
+      "lng": 19.93647222,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Town Hall Tower",
+          "lat": 50.0614,
+          "lng": 19.9358,
+          "deltaM": 48.7
+        },
+        "osm": {
+          "element": "way/25122842",
+          "lat": 50.061489,
+          "lng": 19.936414,
+          "deltaM": 4.6
+        },
+        "osrmSnapM": 13.4,
+        "flag": true,
+        "note": "FLAG 49 m: the map pin is on the square about 45 m west of the tower (on the walking network). Wikidata and the OSM building outline agree within 5 m, so Wikidata is kept; the 50 m radius still contains the map pin."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 50,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the tower's slight lean, about 55 cm"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Town Hall Tower",
+          "revid": 1342970609,
+          "quote": "leans just 55 centimetres, the result of a storm in 1703",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 7,
+      "poiId": "poi_wd_Q898260",
+      "wikidataId": "Q898260",
+      "kind": "church",
+      "names": {
+        "en": "St Adalbert's Church",
+        "pl": "Kościół św. Wojciecha",
+        "zh": "圣亚德伯堂"
+      },
+      "lat": 50.06083333,
+      "lng": 19.93777778,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "St Adalbert's Church",
+          "lat": 50.0609,
+          "lng": 19.937899,
+          "deltaM": 11.4
+        },
+        "osm": {
+          "element": "way/29271113",
+          "lat": 50.060895,
+          "lng": 19.937767,
+          "deltaM": 6.9
+        },
+        "osrmSnapM": 9.8,
+        "flag": false,
+        "note": "Wikidata, OSM outline and map pin agree within 12 m."
+      },
+      "dwellS": 90,
+      "prize": 2,
+      "triggerRadiusM": 50,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "down",
+        "feature": {
+          "en": "the church's floor, which lies below the level of today's square"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Church of St. Adalbert, Kraków",
+          "revid": 1354363686,
+          "quote": "The floor level is situated under the present level of the Square",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 8,
+      "poiId": "poi_wd_Q338657",
+      "wikidataId": "Q338657",
+      "kind": "church",
+      "names": {
+        "en": "Sts Peter and Paul Church",
+        "pl": "Kościół Świętych Piotra i Pawła",
+        "zh": "圣伯多禄圣保禄堂"
+      },
+      "lat": 50.05694444,
+      "lng": 19.93888889,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Sts Peter and Paul",
+          "lat": 50.0573,
+          "lng": 19.939001,
+          "deltaM": 40.3
+        },
+        "osm": {
+          "element": "way/104374972",
+          "lat": 50.056932,
+          "lng": 19.938902,
+          "deltaM": 1.7
+        },
+        "osrmSnapM": 20.4,
+        "flag": true,
+        "note": "FLAG 40 m: the map pin is on Grodzka street in front of the forecourt; Wikidata is the church building (OSM outline 2 m away, nearest walkway 20 m). The church stands back from Grodzka behind its forecourt, so the trigger radius is 45 m instead of the default 35 m, to fire from the street as well."
+      },
+      "dwellS": 150,
+      "prize": 4,
+      "triggerRadiusM": 45,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the sculptures of the apostles on their plinths in front of the church"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Church of Saints Apostles Peter and Paul, Kraków",
+          "revid": 1362854449,
+          "quote": "several plinths with raised sculptures of apostles",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 9,
+      "poiId": "poi_wd_Q1195738",
+      "wikidataId": "Q1195738",
+      "kind": "church",
+      "names": {
+        "en": "St Andrew's Church",
+        "pl": "Kościół św. Andrzeja",
+        "zh": "圣安德肋教堂"
+      },
+      "lat": 50.056605555,
+      "lng": 19.9384,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "St Andrew's Church",
+          "lat": 50.0568,
+          "lng": 19.938599,
+          "deltaM": 25.9
+        },
+        "osm": {
+          "element": "way/29271073",
+          "lat": 50.056635,
+          "lng": 19.938482,
+          "deltaM": 6.7
+        },
+        "osrmSnapM": 6.7,
+        "flag": false,
+        "note": "Wikidata and OSM outline agree within 7 m; the map pin is 26 m away on Grodzka."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the two octagonal towers with their Baroque domes"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "St. Andrew's Church, Kraków",
+          "revid": 1354773237,
+          "quote": "The Baroque domes atop the octagonal towers were added in 1639",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 10,
+      "poiId": "poi_wd_Q8255537",
+      "wikidataId": "Q8255537",
+      "kind": "other",
+      "names": {
+        "en": "Kanonicza Street",
+        "pl": "Ulica Kanonicza",
+        "zh": "咏祷司铎街"
+      },
+      "lat": 50.056482,
+      "lng": 19.93747,
+      "coordinateSource": "osm:length-midpoint of the ways named Kanonicza (890234566, 25118565, 234876445) in data/raw/osm",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Kanonicza Street",
+          "lat": 50.0553,
+          "lng": 19.9378,
+          "deltaM": 133.5
+        },
+        "osm": {
+          "element": "way/890234566+25118565+234876445 (length midpoint)",
+          "lat": 50.056482,
+          "lng": 19.93747,
+          "deltaM": 0.0
+        },
+        "osrmSnapM": 0,
+        "flag": true,
+        "note": "FLAG 134 m: the map pin is at the south end of the street, where the listed-order route of map-meta.json joined Kanonicza from Grodzka. This stop uses the length-midpoint of the three OSM ways named Kanonicza (256 m in total, from the committed OSM tiles), which is also 5.5 m from Wikidata P625 (50.056528, 19.9375), so the walk goes along the street instead of only touching its end."
+      },
+      "dwellS": 120,
+      "prize": 3,
+      "triggerRadiusM": 35,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "level",
+        "feature": {
+          "en": "the decorated stone portals of the Renaissance and Baroque houses"
+        },
+        "basis": {
+          "lang": "pl",
+          "article": "Ulica Kanonicza w Krakowie",
+          "revid": 80292430,
+          "quote": "wiele renesansowych i barokowych kamienic z ozdobnymi portalami",
+          "file": "data/raw/wiki/stops-text-pl.json"
+        },
+        "review": "to review"
+      }
+    },
+    {
+      "n": 11,
+      "poiId": "poi_wd_Q743704",
+      "wikidataId": "Q743704",
+      "kind": "castle",
+      "names": {
+        "en": "Wawel Hill",
+        "pl": "Wawel",
+        "zh": "瓦维尔山"
+      },
+      "lat": 50.054167,
+      "lng": 19.935278,
+      "coordinateSource": "wikidata:P625",
+      "coordinateCheck": {
+        "mapMeta": {
+          "name": "Wawel Hill",
+          "lat": 50.0545,
+          "lng": 19.9355,
+          "deltaM": 40.3
+        },
+        "osm": {
+          "element": "node/7834497364 (label node; castle relation/2270819 centroid 50.054535,19.936632)",
+          "lat": 50.054747,
+          "lng": 19.936107,
+          "deltaM": 87.5
+        },
+        "osrmSnapM": 6.5,
+        "flag": true,
+        "note": "FLAG 40 m: Q743704 'Wawel' (the hill complex) is used instead of Q18820 'Wawel Castle' because the stop covers the cathedral and the castle. Wikidata P625 is the open square south of the cathedral; the map pin is the cathedral forecourt 40 m to the north. The OSM label node (88 m) and the castle outline centroid (105 m east) are not good walking targets. The 60 m radius (ARCHITECTURE 'Wawel courtyard 60') covers both the Wikidata point and the map pin."
+      },
+      "dwellS": 300,
+      "prize": 5,
+      "triggerRadiusM": 60,
+      "approachRadiusM": 110,
+      "view": {
+        "look": "up",
+        "feature": {
+          "en": "the cathedral, where Polish monarchs were crowned and buried"
+        },
+        "basis": {
+          "lang": "en",
+          "article": "Wawel Castle",
+          "revid": 1377861787,
+          "quote": "the Wawel Cathedral where Polish monarchs were crowned and buried",
+          "file": "data/raw/wiki/stops-text-en.json"
+        },
+        "review": "to review"
+      }
+    }
+  ]
+}

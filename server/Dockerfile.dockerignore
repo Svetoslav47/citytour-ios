@@ -1,0 +1,15 @@
+# Docker build context = repo root (server/Dockerfile). Send only what the image needs.
+*
+!server/package.json
+!server/package-lock.json
+!server/tsconfig.json
+!server/tsconfig.build.json
+!server/src
+!server/seed
+!server/docker-entrypoint.sh
+# every course (tour/ + audio/ + cover/, and the full packs/ the seed may still point at) and every city pack
+!data/course
+!data/city
+**/.DS_Store
+**/.env*
+**/.keys

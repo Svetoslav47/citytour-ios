@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "file": "cover.jpg",
+ "width": 1280,
+ "height": 800,
+ "subject": {
+  "en": "The Old Synagogue on Szeroka Street, Kazimierz",
+  "pl": "Stara Synagoga przy ulicy Szerokiej na Kazimierzu",
+  "zh": "卡齐米日塞罗卡街上的旧犹太会堂"
+ },
+ "author": "Marco Almbauer",
+ "license": "CC BY-SA 4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+ "sourceTitle": "File:Alte Synagoge (Krakau).jpg",
+ "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alte_Synagoge_(Krakau).jpg",
+ "publisher": "Wikimedia Commons",
+ "changes": "Cropped to 16:10 and resized to 1280×800 px (JPEG re-encode) by the CityTour team",
+ "retrievedAt": "2026-10-03T22:01:58Z",
+ "commonsRating": "Quality image"
+}

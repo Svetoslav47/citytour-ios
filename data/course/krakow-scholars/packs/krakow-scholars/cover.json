@@ -1,0 +1,19 @@
+{
+ "schemaVersion": 1,
+ "file": "cover.jpg",
+ "width": 1280,
+ "height": 800,
+ "subject": {
+  "en": "The arcaded courtyard of the Collegium Maius with its well",
+  "pl": "Arkadowy dziedziniec Collegium Maius ze studnią",
+  "zh": "大学院（Collegium Maius）带水井的拱廊庭院"
+ },
+ "author": "Chris Olszewski",
+ "license": "CC BY-SA 4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+ "sourceTitle": "File:Courtyard of the Collegium Maius, Kraków, 2024, 09.jpg",
+ "sourceUrl": "https://commons.wikimedia.org/wiki/File:Courtyard_of_the_Collegium_Maius,_Krak%C3%B3w,_2024,_09.jpg",
+ "publisher": "Wikimedia Commons",
+ "changes": "Cropped to 16:10 and resized to 1280×800 px (JPEG re-encode) by the CityTour team",
+ "retrievedAt": "2026-10-03T22:01:58Z"
+}

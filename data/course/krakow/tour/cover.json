@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "file": "cover.jpg",
+ "width": 1280,
+ "height": 800,
+ "subject": {
+  "en": "Wawel Royal Castle above the Vistula in evening sun after rain",
+  "pl": "Zamek Królewski na Wawelu nad Wisłą w wieczornym słońcu po deszczu",
+  "zh": "雨后夕阳下维斯瓦河畔的瓦维尔皇家城堡"
+ },
+ "author": "Jakub Hałun",
+ "license": "CC BY-SA 4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+ "sourceTitle": "File:20200826 Wawel i Wisła w Krakowie 1752 1334.jpg",
+ "sourceUrl": "https://commons.wikimedia.org/wiki/File:20200826_Wawel_i_Wis%C5%82a_w_Krakowie_1752_1334.jpg",
+ "publisher": "Wikimedia Commons",
+ "changes": "Cropped to 16:10 and resized to 1280×800 px (JPEG re-encode) by the CityTour team",
+ "retrievedAt": "2026-10-03T22:01:58Z",
+ "commonsRating": "Quality image"
+}
