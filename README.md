@@ -68,6 +68,12 @@ text-to-speech voice**. How each piece maps is in [`docs/PORTING.md`](docs/PORTI
   authorization).
 - **Developer page:** long-press Settings › About › Version, or open `citytour://DevPanel`. It adds a live view of
   the app log (the iOS stand-in for hilog).
+- **Two fixes over the original:** the Developer page no longer takes the speech/background listeners from a
+  running tour (the tour stalled after one sentence), and at a stop Now Walking names that stop even when a real-GPS
+  tour starts mid-route.
+- **Simulator GPS:** a fixed simulated location delivers one fix and then stays silent, so a real-GPS tour on the
+  simulator reports `LOC_LOST` after ~26 s; use `xcrun simctl location booted start` with waypoints for a moving
+  walk, or the Demo walk.
 - **Expo SDK 54, not 57:** SDK 57 needs Xcode 26; the development machine runs Xcode 16.2.
 
 ## Requirements (tested versions)

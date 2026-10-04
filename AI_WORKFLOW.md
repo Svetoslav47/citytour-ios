@@ -51,3 +51,15 @@ confidential prompts.
   entry, notification, haptic call, widget push, lock-screen session, turn-by-turn cues, demo controls (speed ×8).
 - **Not verifiable on the simulator:** haptics (no Taptic Engine), real background behaviour with the screen locked
   over a long walk, the widget as placed on a home screen (needs manual placement).
+
+### 2026-10-05 — full Demo walk on iOS, two fixes
+
+- **Verified on the simulator:** the Developer page's Start demo tour (×8) ran the Royal Route to the end: 11/11
+  stops entered in the planned order, one `OFF_ROUTE` on the scripted detour, `REPLAN changed=0`, `ON_ROUTE`,
+  `STATE to=finished`, `TOUR_SUMMARY complete=1 heard=11/11 time=walking_pace src=demo`, then `BG_STOP` and the
+  lock-screen session destroyed. Voice sources: 209 clips, 16 server-rendered, 3 server-cache hits. The full course
+  download (1168 signed files, 32 MB) installed in 47 s while a tour ran. A network drop mid-tour fell back to text
+  without stalling. Real Core Location via `xcrun simctl location` started a tour mid-route at the Town Hall Tower.
+- **Bugs found and fixed:** the Developer page stole the tour's speech listener (tour stalled after one sentence;
+  latent in the original); Now Walking named the planned target instead of the current stop when a real-GPS tour
+  started mid-route (also in the original).
