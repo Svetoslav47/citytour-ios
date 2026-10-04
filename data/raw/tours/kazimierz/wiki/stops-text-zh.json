@@ -1,0 +1,142 @@
+{
+ "meta": {
+  "count": 9,
+  "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts%7Crevisions%7Cinfo&explaintext=1&exsectionformat=wiki&rvprop=ids%7Ctimestamp&inprop=url&redirects=1&format=json&formatversion=2&titles={title}&variant=zh-hans",
+  "licence": "CC BY-SA 4.0, Wikipedia contributors",
+  "missing": [
+   {
+    "qid": "Q11746976",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q15880176",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q11008519",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q115001",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q9366047",
+    "reason": "no zh article"
+   }
+  ],
+  "processing": "whole article as plain text with \"== Heading ==\" lines; trailing link/reference sections dropped; capped at 6000 chars on a paragraph or sentence end (truncated=true)",
+  "retrievedAt": "2026-10-03T21:28:24Z",
+  "source": "zh.wikipedia.org action API, prop=extracts (plain text) + revisions + info"
+ },
+ "pages": {
+  "Q1420580": {
+   "chars": 511,
+   "fullChars": 511,
+   "pageid": 4487397,
+   "qid": "Q1420580",
+   "revid": 74145823,
+   "text": "圣弥额尔圣达尼老圣殿（波兰语：Bazylika św. Michała Archanioła i św. Stanisława Biskupa，Skałka，意为小岩石）位于波兰克拉科夫，是一座罗马天主教宗座圣殿，波兰最著名的朝圣地之一。\n1079年，克拉科夫主教圣达尼老在此被波兰国王波列斯瓦夫二世杀害。此举导致国王流亡国外，以及被杀主教最终列圣。\n该堂最初为罗曼式建筑。卡齐米日三世新建一座哥特式教堂。1733年至1751年，该堂进行了巴洛克装饰。\n教堂的地下室号称“国家先贤祠”，埋葬一些波兰杰出的名人，尤其是住在克拉科夫的名人：\n\n斯坦尼斯拉夫·维斯皮安斯基 (1869–1907) 剧作家、画家和诗人\n卡罗尔·席曼诺夫斯基 (1882–1937), 作曲家、钢琴演奏家\n切斯瓦夫·米沃什 (1911–2004),诗人、散文家，诺贝尔文学奖得主\n\n== 参考 ==\n（波兰语） Official site （页面存档备份，存于互联网档案馆）\nEntry at Krakow Info （页面存档备份，存于互联网档案馆）\n'Sowa' Licensed Krakow Guides （页面存档备份，存于互联网档案馆）",
+   "timestamp": "2022-10-18T06:43:19Z",
+   "title": "圣弥额尔圣达尼老圣殿",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E5%BC%A5%E9%A2%9D%E5%B0%94%E5%9C%A3%E8%BE%BE%E5%B0%BC%E8%80%81%E5%9C%A3%E6%AE%BF"
+  },
+  "Q194616": {
+   "chars": 268,
+   "fullChars": 268,
+   "pageid": 8152087,
+   "qid": "Q194616",
+   "revid": 94362399,
+   "text": "克拉科夫民族学博物馆（波兰语：Muzeum Etnograficzne im. Seweryna Udzieli w Krakowie）位于是波兰克拉科夫卡齐米日的一个博物馆，成立于1902年。二战以后，馆址迁至沃尔尼查广场（Plac Wolnica）1号，原卡齐米日市政厅，并在克拉科夫斯卡街46号的埃斯特尔卡宫，设有分馆。藏品超过80000件，与波兰文化（民俗、艺术、日常生活等）以及欧洲和世界其他文化有关。2013年，埃里卡·莱勒策划了《纪念品、护身符、玩具》展览，探索犹太雕像的发展，尤其是“幸运的犹太人”。\n\n== 参考 ==",
+   "timestamp": "2026-09-14T20:23:29Z",
+   "title": "克拉科夫民族学博物馆",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB%E6%B0%91%E6%97%8F%E5%AD%A6%E5%8D%9A%E7%89%A9%E9%A6%86"
+  },
+  "Q2084317": {
+   "chars": 236,
+   "fullChars": 236,
+   "pageid": 4485542,
+   "qid": "Q2084317",
+   "revid": 84280569,
+   "text": "基督圣体圣殿（Bazylika Bożego Ciała），位于波兰克拉科夫卡齐米日区，是一座罗马天主教宗座圣殿，哥特式风格，由国王卡齐米日三世创建于1335年。 \n\n== 参考 ==\n\nKraków Tourism information about Krakow （页面存档备份，存于互联网档案馆）\nProtect Kraków Heritage Campaign\nMap: Kraków Heritage Under Threat （页面存档备份，存于互联网档案馆）",
+   "timestamp": "2024-09-20T11:09:31Z",
+   "title": "基督圣体圣殿 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%9D%A3%E5%9C%A3%E4%BD%93%E5%9C%A3%E6%AE%BF_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q3109262": {
+   "chars": 757,
+   "fullChars": 757,
+   "pageid": 1652564,
+   "qid": "Q3109262",
+   "revid": 74145880,
+   "text": "以撒会堂（Synagoga Izaaka Jakubowicza）是一座犹太会堂，建于1644年，位于波兰克拉科夫历史悠久的卡齐米日区。它得名于其捐助者，雅各的儿子以撒（卒于1673年），也叫财主以撒，是国王瓦迪斯瓦夫四世的银行家。犹太会堂是由在波兰工作的意大利人Francesco Olivierri设计。雅各的儿子以撒安葬在Remuh 公墓。\n\n== 传说 ==\n以撒会堂的创始人是一千零一夜的故事的一个传奇英雄雅各的儿子以撒，一个虔诚，但贫穷的犹太人。他梦见在布拉格的旧桥下面埋藏着宝藏。他毫不拖延，到达目的地。但是有一队士兵把守大桥，挖掘出了问题。以撒把他的梦告诉官员，答应分给他一半战利品。官员回答说：“只有波兰犹太人这样的傻瓜才会相信梦。几个晚上我一直梦到在犹太城卡齐米日贫穷的犹太人雅各的儿子以撒家的烤箱中藏着宝藏。你觉得我会愚蠢到去克拉科夫寻找这个雅各的儿子以撒的家吗?”以撒立刻回家，搬走烤箱，发现宝藏，成为财主。在此之后有人说：“有一些你全世界寻找的东西，只有在在自己家里才能发现。但是，在你意识到这一点之前，你往往不得不走上旅程，搜索无远弗届。” 。\n\n== 建筑 ==\n这座早期巴洛克式建筑的内墙装饰丰富，纳粹占领波兰之前，此会堂拥有著名的约柜。当建筑规划时，一些教区官员认为设计对于犹太人太美丽了，导致工程的延误。建筑史学家克林斯基认为以撒会堂是克拉科夫所有旧犹太教堂中建筑上最重要的。 \n\n== 历史 ==\n1939年12月5日，盖世太保命令当天值班的犹太官员马西米兰·瑞德利奇焚烧犹太经卷。当瑞德利奇拒绝，他被枪杀。 \n纳粹破坏了内部的陈设。战争结束后，用于存储剧团的道具。在1981年内部烧毁。翻新在1983年和1989年开始，共产党在波兰倒台后，建筑归还犹太社区。目前它用于展览。",
+   "timestamp": "2022-10-18T06:49:16Z",
+   "title": "以撒会堂",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E4%BB%A5%E6%92%92%E4%BC%9A%E5%A0%82"
+  },
+  "Q3354482": {
+   "chars": 408,
+   "fullChars": 408,
+   "pageid": 1059236,
+   "qid": "Q3354482",
+   "revid": 94675299,
+   "text": "圣殿会堂（波兰语：Synagoga Tempel w Krakowie）是一座犹太教改革派的会堂，位于波兰克拉科夫的卡齐米日区，摩尔复兴式建筑风格，由伊格纳西·赫尔柯克设计，兴建于1860-1862年 沿着Miodowa街。圣殿会堂模仿了奥地利维也纳的利奥波德城会堂，中部较高，两翼较低。在兴建会堂时，克拉科夫是奥匈帝国的一部分。室内相当华丽，密集地装饰着许多色彩的图案和大量金叶，但是这些图案，除了天花板之外，都不是摩尔式的。圣约柜上面的拱门带有长短交替的图案，更多体现了波兰民间风格而不是伊斯兰风格。圣约柜覆盖着金叶圆顶，令人想起附近瓦维尔主教座堂的齐格蒙特小堂上面的圆顶。\n这座犹太会堂在二战期间被德国纳粹毁坏，用于储存弹药。战后，再次用于祈祷。1947年，在会堂的北部修建了浸礼池。1985年之前一直举行定期的祷告。这座犹太会堂从1995年到2000年进行了大规模修复。今天仍在活动，但是祷告一年只举行几次。",
+   "timestamp": "2026-09-30T21:12:38Z",
+   "title": "圣殿会堂",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E6%AE%BF%E4%BC%9A%E5%A0%82"
+  },
+  "Q3502453": {
+   "chars": 91,
+   "fullChars": 91,
+   "pageid": 6070452,
+   "qid": "Q3502453",
+   "revid": 74146003,
+   "text": "旧犹太会堂是位于波兰克拉科夫卡齐米日地区的一座犹太教正统派的犹太会堂。这座犹太会堂是波兰历史最古老的现存犹太会堂，也是欧洲最著名的犹太建筑地标之一。现在这座犹太会堂也作为博物馆使用。",
+   "timestamp": "2022-10-18T07:02:03Z",
+   "title": "舊猶太會堂",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E8%88%8A%E7%8C%B6%E5%A4%AA%E6%9C%83%E5%A0%82"
+  },
+  "Q3507991": {
+   "chars": 68,
+   "fullChars": 68,
+   "pageid": 7728896,
+   "qid": "Q3507991",
+   "revid": 89957735,
+   "text": "库帕犹太会堂（波兰语：Synagoga Kupa）是波兰城市克拉科夫的一座犹太会堂，修建于17世纪。这座犹太会堂位于克拉科夫的旧犹太区。",
+   "timestamp": "2025-11-13T04:18:49Z",
+   "title": "庫帕猶太會堂",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%BA%AB%E5%B8%95%E7%8C%B6%E5%A4%AA%E6%9C%83%E5%A0%82"
+  },
+  "Q3511288": {
+   "chars": 87,
+   "fullChars": 87,
+   "pageid": 7728887,
+   "qid": "Q3511288",
+   "revid": 89964450,
+   "text": "沃尔夫·波佩犹太会堂（波兰语：Synagoga Poppera (Bociana)）是波兰城市克拉科夫的一座犹太会堂，位于克拉科夫的旧犹太区。这座犹太会堂设立于17世纪初期。",
+   "timestamp": "2025-11-13T11:27:33Z",
+   "title": "沃爾夫·波佩猶太會堂",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E6%B2%83%E7%88%BE%E5%A4%AB%C2%B7%E6%B3%A2%E4%BD%A9%E7%8C%B6%E5%A4%AA%E6%9C%83%E5%A0%82"
+  },
+  "Q3618": {
+   "chars": 165,
+   "fullChars": 165,
+   "pageid": 6070453,
+   "qid": "Q3618",
+   "revid": 94612654,
+   "text": "莱姆犹太会堂（波兰语：Synagoga Remuh）是波兰城市克拉科夫的一座犹太会堂，也是克拉科夫两座现在仍活跃的犹太会堂之一。现在的犹太会堂建筑历史可以追溯至1829年。1933年，犹太会堂进行了修复。在第二次世界大战期间，该犹太会堂被作为仓库使用，内部部分装饰品被掠夺，但建筑本身并未受损。1957年，莱姆犹太会堂进行了修复。",
+   "timestamp": "2026-09-27T20:59:21Z",
+   "title": "萊姆猶太會堂",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E8%90%8A%E5%A7%86%E7%8C%B6%E5%A4%AA%E6%9C%83%E5%A0%82"
+  }
+ }
+}

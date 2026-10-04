@@ -1,0 +1,1767 @@
+{
+ "$comment": "Shared expectations for the narration validator spec v1: scripts/pack/80-validate.mjs (pipeline) and core/content/NarrationValidator.ets (app, task B3) must give these verdicts. ctx.sourceTexts is absent on purpose: claims_quote is pipeline-only and never runs here. Where spec v1 left a detail open the cases pin the behaviour of the merged app port (core/content/NarrationValidator.ets, PR #56): numbers match as substrings, nothing (not even a [pNNN] pause marker) is stripped from the text, possessives are not stripped. expectFailed lists every failed check id in check order (a schema failure stops validation). Hand-made; the narration.validation field is ignored by the validator.",
+ "validatorVersion": 1,
+ "cases": [
+  {
+   "name": "valid reviewed EN teaser passes",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "zh text in an en slot fails lang",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "克拉科夫瓮城是一座位于波兰克拉科夫的城防建筑，建于十五世纪末。"
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "lang",
+   "expectFailed": [
+    "lang"
+   ]
+  },
+  {
+   "name": "invented year not in the claims fails numbers",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1347 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "numbers",
+   "expectFailed": [
+    "numbers"
+   ]
+  },
+  {
+   "name": "numbers match as substrings of a quote (\"14\" is found in \"1498\")",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built in the 14th century to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "c",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "d",
+      "sourceId": "wp_en_Q807309",
+      "quote": "outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "\"on your left\" fails forbidden",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican is on your left, built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "forbidden",
+   "expectFailed": [
+    "forbidden"
+   ]
+  },
+  {
+   "name": "200-word teaser fails length",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "length",
+   "expectFailed": [
+    "length"
+   ]
+  },
+  {
+   "name": "reviewed without reviewedBy fails schema",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "schema",
+   "expectFailed": [
+    "schema"
+   ]
+  },
+  {
+   "name": "reviewedBy with status \"pending\" fails schema",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "pending"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "schema",
+   "expectFailed": [
+    "schema"
+   ]
+  },
+  {
+   "name": "unknown tier fails schema",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "ai-magic",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "schema",
+   "expectFailed": [
+    "schema"
+   ]
+  },
+  {
+   "name": "id that does not match poiId:personaId:lang:length fails schema",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:full",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "schema",
+   "expectFailed": [
+    "schema"
+   ]
+  },
+  {
+   "name": "unknown source id fails schema",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q1"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "schema",
+   "expectFailed": [
+    "schema"
+   ]
+  },
+  {
+   "name": "an empty sentence fails schema",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city.",
+     "  "
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "schema",
+   "expectFailed": [
+    "schema"
+   ]
+  },
+  {
+   "name": "a markdown \"#\" fails forbidden",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "## The Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "forbidden",
+   "expectFailed": [
+    "forbidden"
+   ]
+  },
+  {
+   "name": "a \"[\" that is not a pause marker fails forbidden",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican is a fortified outpost that was once connected to the city walls [citation needed]."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "forbidden",
+   "expectFailed": [
+    "forbidden"
+   ]
+  },
+  {
+   "name": "a [pNNN] pause marker is not a forbidden \"[\"",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican is a fortified outpost that was once connected to the city walls. [p400]",
+     "It guarded the road into the city."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "pause-marker digits count as numbers in authored scripts (v1: quote them or leave markers out)",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was built around 1498 to guard the road into the city. [p500]",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "numbers",
+   "expectFailed": [
+    "numbers"
+   ]
+  },
+  {
+   "name": "a historian hedge fails forbidden",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "Legend has it that the Barbican was built around 1498 to guard the road into the city.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "forbidden",
+   "expectFailed": [
+    "forbidden"
+   ]
+  },
+  {
+   "name": "Polish extract with diacritics passes lang (no stopwords needed)",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:pl:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "pl",
+    "length": "teaser",
+    "sentences": [
+     "Barbakan – zabytkowa budowla obronna, wzniesiona około 1498 roku."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_pl_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:09:56Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "Polish text in an en extract slot fails lang",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "Barbakan jest to budowla obronna, która była połączona z murami miasta przez szyję."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "lang",
+   "expectFailed": [
+    "lang"
+   ]
+  },
+  {
+   "name": "50-word sentence in a reviewed full fails sentence_length",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:full",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "full",
+    "sentences": [
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick.",
+     "The walls stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone stone were thick."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "sentence_length",
+   "expectFailed": [
+    "sentence_length"
+   ]
+  },
+  {
+   "name": "source extract with 7 sentences fails extract_size",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican is a gate of the city and part 0 of it is old.",
+     "The Barbican is a gate of the city and part 1 of it is old.",
+     "The Barbican is a gate of the city and part 2 of it is old.",
+     "The Barbican is a gate of the city and part 3 of it is old.",
+     "The Barbican is a gate of the city and part 4 of it is old.",
+     "The Barbican is a gate of the city and part 5 of it is old.",
+     "The Barbican is a gate of the city and part 6 of it is old."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "extract_size",
+   "expectFailed": [
+    "extract_size"
+   ]
+  },
+  {
+   "name": "10000 chars in total fails total_chars",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican Barbican gate."
+    ],
+    "tier": "name-only",
+    "sources": [
+     "wd_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "template",
+     "at": "2026-10-03T14:11:07Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "total_chars",
+   "expectFailed": [
+    "total_chars"
+   ]
+  },
+  {
+   "name": "invented names fail proper_nouns",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican was designed by Hans Fuchs and Peter Schmidt around 1498.",
+     "It is one of the few fortified outposts of this kind still standing in Europe."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "proper_nouns",
+   "expectFailed": [
+    "proper_nouns"
+   ]
+  },
+  {
+   "name": "allowlisted names pass proper_nouns",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican guarded the road to Kraków from the north around 1498.",
+     "It is one of the few fortified outposts of this kind still standing in Europe, near the Old Town."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "a possessive is not stripped: \"Kraków's\" is not found (4 of 5 found < 85 %)",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican guarded Kraków's road from the north around 1498.",
+     "It is one of the few fortified outposts of this kind still standing in Europe, near the Old Town."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "proper_nouns",
+   "expectFailed": [
+    "proper_nouns"
+   ]
+  },
+  {
+   "name": "name-only EN template passes (lang is not checked)",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "Barbican, gate, built in 1498."
+    ],
+    "tier": "name-only",
+    "sources": [
+     "wd_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "template",
+     "at": "2026-10-03T14:11:07Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "name-only ZH template passes",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:zh:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "teaser",
+    "sentences": [
+     "克拉科夫瓮城，城门，建于1498年。"
+    ],
+    "tier": "name-only",
+    "sources": [
+     "wd_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "template",
+     "at": "2026-10-03T14:11:07Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "valid reviewed ZH teaser passes",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:zh:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "teaser",
+    "sentences": [
+     "克拉科夫瓮城约建于1498年，用来守卫通往城内的道路。",
+     "它是欧洲至今仍保存下来的少数几座同类防御前哨之一，砖墙上有七座小塔。"
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_zh_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "约1498年建成。",
+      "sourceId": "wp_zh_Q807309",
+      "quote": "瓮城约建于1498年"
+     }
+    ],
+    "generatedBy": {
+     "kind": "human",
+     "at": "2026-10-03T23:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": true,
+   "expectFirstFailed": null,
+   "expectFailed": []
+  },
+  {
+   "name": "URL fails forbidden",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "The Barbican is a fortified outpost of the city, see https://example.org for more."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "forbidden",
+   "expectFailed": [
+    "forbidden"
+   ]
+  },
+  {
+   "name": "\"As an AI\" fails forbidden",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "As an AI, I cannot say much more about the Barbican and the walls of the city."
+    ],
+    "tier": "source-extract",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [],
+    "generatedBy": {
+     "kind": "extract",
+     "at": "2026-10-03T14:01:44Z"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "forbidden",
+   "expectFailed": [
+    "forbidden"
+   ]
+  },
+  {
+   "name": "several failures are reported in check order",
+   "narration": {
+    "id": "poi_wd_Q807309:historian:en:teaser",
+    "poiId": "poi_wd_Q807309",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+     "Hans Fuchs built it in 1347 and it is on your right."
+    ],
+    "tier": "reviewed",
+    "sources": [
+     "wp_en_Q807309"
+    ],
+    "claims": [
+     {
+      "text": "Built around 1498.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "The Barbican was built around 1498"
+     },
+     {
+      "text": "One of the few left.",
+      "sourceId": "wp_en_Q807309",
+      "quote": "one of the few remaining fortified outposts in Europe"
+     }
+    ],
+    "generatedBy": {
+     "kind": "llm",
+     "model": "claude-opus-5-5",
+     "promptId": "historian-v1",
+     "at": "2026-10-03T20:00:00Z"
+    },
+    "reviewedBy": {
+     "reviewer": "MS",
+     "at": "2026-10-03T22:30:00Z",
+     "status": "approved"
+    },
+    "validation": {
+     "status": "pass",
+     "checks": [],
+     "validatorVersion": 1
+    }
+   },
+   "ctx": {
+    "sourceIds": [
+     "wp_en_Q807309",
+     "wp_pl_Q807309",
+     "wp_zh_Q807309",
+     "wd_Q807309"
+    ],
+    "poiNames": [
+     "Barbican",
+     "Barbakan",
+     "克拉科夫瓮城"
+    ]
+   },
+   "expectOk": false,
+   "expectFirstFailed": "length",
+   "expectFailed": [
+    "length",
+    "numbers",
+    "proper_nouns",
+    "forbidden"
+   ]
+  }
+ ]
+}

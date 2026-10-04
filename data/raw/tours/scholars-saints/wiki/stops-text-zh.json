@@ -1,0 +1,102 @@
+{
+ "meta": {
+  "count": 6,
+  "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts%7Crevisions%7Cinfo&explaintext=1&exsectionformat=wiki&rvprop=ids%7Ctimestamp&inprop=url&redirects=1&format=json&formatversion=2&titles={title}&variant=zh-hans",
+  "licence": "CC BY-SA 4.0, Wikipedia contributors",
+  "missing": [
+   {
+    "qid": "Q2983000",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q11746949",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q11691320",
+    "reason": "no zh article"
+   },
+   {
+    "qid": "Q4865820",
+    "reason": "no zh article"
+   }
+  ],
+  "processing": "whole article as plain text with \"== Heading ==\" lines; trailing link/reference sections dropped; capped at 6000 chars on a paragraph or sentence end (truncated=true)",
+  "retrievedAt": "2026-10-03T21:24:42Z",
+  "source": "zh.wikipedia.org action API, prop=extracts (plain text) + revisions + info"
+ },
+ "pages": {
+  "Q1126134": {
+   "chars": 156,
+   "fullChars": 156,
+   "pageid": 6465984,
+   "qid": "Q1126134",
+   "revid": 89971987,
+   "text": "圣亚纳协同教堂（波兰语：Kolegiata św. Anny）是波兰城市克拉科夫的一座教堂。这座教堂是波兰巴洛克式建筑的代表作之一，其历史可追溯至14世纪。圣亚纳教堂首次被提及是在1381年。1407年，圣亚纳教堂被大火烧毁，但之后按哥特式风格重建。1689年，哥特式教堂被拆除，取而代之的是现在的巴洛克式教堂。",
+   "timestamp": "2025-11-13T19:35:31Z",
+   "title": "聖亞納協同教堂 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E8%81%96%E4%BA%9E%E7%B4%8D%E5%8D%94%E5%90%8C%E6%95%99%E5%A0%82_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q1237964": {
+   "chars": 269,
+   "fullChars": 269,
+   "pageid": 4487470,
+   "qid": "Q1237964",
+   "revid": 74145817,
+   "text": "天主圣三圣殿（波兰语：Bazylika Świętej Trójcy）位于克拉科夫Stolarska街12号，是一座罗马天主教宗座圣殿。\n该堂建于13世纪，1223年祝圣。1957年升格为宗座圣殿。\n\n== 参考 ==\nBazylika św. Trójcy – oficjalna strona Dominikanów（页面存档备份，存于互联网档案馆）\nBazylika św. Trójcy – historia i galeria zdjęć （页面存档备份，存于互联网档案馆）\nOrgany Bazyliki św. Trójcy",
+   "timestamp": "2022-10-18T06:42:49Z",
+   "title": "天主圣三圣殿 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%A4%A9%E4%B8%BB%E5%9C%A3%E4%B8%89%E5%9C%A3%E6%AE%BF_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q1328725": {
+   "chars": 148,
+   "fullChars": 148,
+   "pageid": 4485454,
+   "qid": "Q1328725",
+   "revid": 90852817,
+   "text": "圣方济各圣殿（波兰语：Kościół św. Franciszka z Asyżu）及方济各会修道院是一个罗马天主教宗教建筑群，位于波兰克拉科夫老城区的诸圣广场西侧，街对面的主教宫为若望保禄二世的住所。该堂的历史可追溯到13世纪。1919年，马希连·国柏在该堂举行第一场弥撒。\n\n== 参考 ==",
+   "timestamp": "2025-12-26T17:58:28Z",
+   "title": "圣方济各圣殿 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E6%96%B9%E6%B5%8E%E5%90%84%E5%9C%A3%E6%AE%BF_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q616675": {
+   "chars": 300,
+   "fullChars": 300,
+   "pageid": 4485514,
+   "qid": "Q616675",
+   "revid": 93474193,
+   "text": "克拉科夫主教宫（波兰语：Pałac Biskupi w Krakowie），或译克拉科夫主教府、克拉科夫总主教府，是天主教克拉科夫总教区的主教公署所在地，位于波兰城市克拉科夫旧城区的西南方。此处自14世纪起成为克拉科夫的主教官邸，也是该市第二大宫殿式建筑，仅次于曾是波兰王室驻地的瓦维尔城堡。这是方济各会修道院建筑群的一部分。\n1958-1978年，若望保禄二世担任克拉科夫总主教期间曾居住于此。他经常在晚间从大门上方的“教宗窗户”向信徒们进行祝福和谈话。\n\n2005年4月2日若望保禄二世去世后，有4万名天主教徒聚集在主教宫前守夜和祈祷。在每年去世周年日，都有数千信徒来此聚集。\n\n== 参考 ==",
+   "timestamp": "2026-07-15T06:01:58Z",
+   "title": "主教宫 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E4%B8%BB%E6%95%99%E5%AE%AB_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q7029919": {
+   "chars": 203,
+   "fullChars": 203,
+   "pageid": 8144764,
+   "qid": "Q7029919",
+   "revid": 89952253,
+   "text": "哥白尼纪念碑（波兰语：Pomnik Mikołaja Kopernika）是波兰克拉科夫的一处著名地标，纪念天文学家哥白尼，他就读于克拉科夫学院，他的父亲也是来自这座城市，当时是波兰首都。\n雕塑由雕刻家西普里安·戈德布斯基设计于1899年，1900年完成。它最初位于雅盖隆大学的克拉科夫大学院的庭院中。1953年移到克拉科夫的普兰提公园，维特科夫斯基学院（Collegium Witkowski）大楼前方。",
+   "timestamp": "2025-11-12T20:35:39Z",
+   "title": "哥白尼纪念碑 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%93%A5%E7%99%BD%E5%B0%BC%E7%BA%AA%E5%BF%B5%E7%A2%91_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q919596": {
+   "chars": 71,
+   "fullChars": 71,
+   "pageid": 5064565,
+   "qid": "Q919596",
+   "revid": 89949147,
+   "text": "大学院（波兰语：Collegium Maius）是位于波兰克拉科夫旧城区的一座建筑物，为亚捷隆大学最古老的校舍建筑，其历史可以追溯至14世纪。",
+   "timestamp": "2025-11-12T16:39:44Z",
+   "title": "克拉科夫大學院",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB%E5%A4%A7%E5%AD%B8%E9%99%A2"
+  }
+ }
+}
