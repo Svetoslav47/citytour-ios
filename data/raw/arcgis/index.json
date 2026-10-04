@@ -1,0 +1,97 @@
+{
+ "countOnly": [
+  {
+   "counts": {
+    "0": 436,
+    "1": 237
+   },
+   "item": {
+    "access": "public",
+    "accessInformation": null,
+    "itemId": "96212186d4b9401790f17d814f4b3dd7",
+    "itemPage": "https://www.arcgis.com/home/item.html?id=96212186d4b9401790f17d814f4b3dd7",
+    "licence": "UNVERIFIED",
+    "licenseInfo": null,
+    "modified": "2023-11-16T21:12:18.000Z",
+    "owner": "kozielskam",
+    "title": "EOZ Zabytki _ Archeologia (2)"
+   },
+   "layers": [
+    0,
+    1
+   ],
+   "reason": "same layer names, fields and counts as EOZ_Zabytki___Archeologia (a copy owned by another org member); not downloaded",
+   "retrievedAt": "2026-10-03T13:24:27Z",
+   "service": "EOZ_Zabytki___Archeologia__2_",
+   "url": "https://services-eu1.arcgis.com/svTzSt3AvH7sK6q9/ArcGIS/rest/services/EOZ_Zabytki___Archeologia__2_/FeatureServer"
+  }
+ ],
+ "layers": [
+  {
+   "count": 395,
+   "layerId": 0,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:08Z",
+   "service": "Pomnik",
+   "slug": "pomnik"
+  },
+  {
+   "count": 923,
+   "layerId": 0,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:09Z",
+   "service": "Zabytkowe_tablice_SIM",
+   "slug": "zabytkowe-tablice-sim"
+  },
+  {
+   "count": 2,
+   "layerId": 0,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:11Z",
+   "service": "EOZ_Zabytki___Warstwa_zbiorcza___AKTUALNA",
+   "slug": "eoz-zabytki-zbiorcza-line"
+  },
+  {
+   "count": 8739,
+   "layerId": 1,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:17Z",
+   "service": "EOZ_Zabytki___Warstwa_zbiorcza___AKTUALNA",
+   "slug": "eoz-zabytki-zbiorcza-polygon"
+  },
+  {
+   "count": 436,
+   "layerId": 0,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:20Z",
+   "service": "EOZ_Zabytki___Archeologia",
+   "slug": "eoz-zabytki-archeologia-point"
+  },
+  {
+   "count": 237,
+   "layerId": 1,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:21Z",
+   "service": "EOZ_Zabytki___Archeologia",
+   "slug": "eoz-zabytki-archeologia-polygon"
+  },
+  {
+   "count": 8735,
+   "layerId": 0,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:25Z",
+   "service": "otwarte_dane_eoz",
+   "slug": "otwarte-dane-eoz"
+  },
+  {
+   "count": 2,
+   "layerId": 0,
+   "licence": "UNVERIFIED",
+   "retrievedAt": "2026-10-03T13:24:26Z",
+   "service": "UNESCO_4f365",
+   "slug": "unesco"
+  }
+ ],
+ "org": "Zintegrowana Platforma GIS - Gmina Miejska Kraków (gmk-2.maps.arcgis.com)",
+ "servicesDirectory": "https://services-eu1.arcgis.com/svTzSt3AvH7sK6q9/ArcGIS/rest/services"
+}

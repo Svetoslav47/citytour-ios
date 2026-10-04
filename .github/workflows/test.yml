@@ -1,0 +1,23 @@
+name: test
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Core (shared tour logic)
+        working-directory: core
+        run: npm ci && npm test && npm run typecheck
+      - name: App (unit tests, typecheck, lint)
+        working-directory: app
+        run: npm ci && npm test && npm run typecheck && npx expo lint
+      - name: Server
+        working-directory: server
+        run: npm ci && npm test
+      - name: Data pipeline and voice scripts
+        run: node --test scripts/pack/*.test.mjs scripts/voice/*.test.mjs
