@@ -1,0 +1,155 @@
+[
+  {
+    "id": "poi_stub_barbican:historian:zh:teaser",
+    "poiId": "poi_stub_barbican",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "teaser",
+    "sentences": [
+      "您已到达巴比肯。",
+      "这是开发者测试包中的占位文本。"
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "fixture"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_barbican:historian:zh:full",
+    "poiId": "poi_stub_barbican",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "full",
+    "sentences": [
+      "这里是巴比肯。",
+      "真正的历史学家讲解稿将随城市数据包一起提供。",
+      "在此之前，这段占位文本用于端到端测试导览引擎和语音。"
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "fixture"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_st_marys:historian:zh:teaser",
+    "poiId": "poi_stub_st_marys",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "teaser",
+    "sentences": [
+      "您已到达圣母圣殿。",
+      "这是开发者测试包中的占位文本。"
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "fixture"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_st_marys:historian:zh:full",
+    "poiId": "poi_stub_st_marys",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "full",
+    "sentences": [
+      "这里是圣母圣殿。",
+      "真正的历史学家讲解稿将随城市数据包一起提供。",
+      "在此之前，这段占位文本用于端到端测试导览引擎和语音。"
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "fixture"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_cloth_hall:historian:zh:teaser",
+    "poiId": "poi_stub_cloth_hall",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "teaser",
+    "sentences": [
+      "您已到达纺织会馆。",
+      "这是开发者测试包中的占位文本。"
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "fixture"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_cloth_hall:historian:zh:full",
+    "poiId": "poi_stub_cloth_hall",
+    "personaId": "historian",
+    "lang": "zh",
+    "length": "full",
+    "sentences": [
+      "这里是纺织会馆。",
+      "真正的历史学家讲解稿将随城市数据包一起提供。",
+      "在此之前，这段占位文本用于端到端测试导览引擎和语音。"
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "fixture"
+      ],
+      "validatorVersion": 0
+    }
+  }
+]

@@ -1,0 +1,126 @@
+{
+ "meta": {
+  "count": 9,
+  "endpoint": "https://en.wikipedia.org/w/api.php?action=query&prop=extracts%7Crevisions%7Cinfo&explaintext=1&exsectionformat=wiki&rvprop=ids%7Ctimestamp&inprop=url&redirects=1&format=json&formatversion=2&titles={title}",
+  "licence": "CC BY-SA 4.0, Wikipedia contributors",
+  "missing": [
+   {
+    "qid": "Q11691320",
+    "reason": "no en article"
+   }
+  ],
+  "processing": "whole article as plain text with \"== Heading ==\" lines; trailing link/reference sections dropped; capped at 6000 chars on a paragraph or sentence end (truncated=true)",
+  "retrievedAt": "2026-10-03T21:24:36Z",
+  "source": "en.wikipedia.org action API, prop=extracts (plain text) + revisions + info"
+ },
+ "pages": {
+  "Q1126134": {
+   "chars": 1769,
+   "fullChars": 1769,
+   "pageid": 24519803,
+   "qid": "Q1126134",
+   "revid": 1362854501,
+   "text": "The Church of St. Anne (Polish: Kościół św. Anny), is a historic Roman Catholic parish and university collegiate church located at 13 św. Anny Street in the Old Town of Kraków, Poland.\nIt is one of the leading examples of Polish Baroque architecture designed by Tylman van Gameren, but the church's history dates back to 14th century.\n\n== History ==\nThe church was first mentioned in 1381 in the deed of donation of Sulisław I Nawoja of Grodziec. In 1407 the church was completely destroyed during a fire, but it was rebuilt the same year in the Gothic style by King Władysław II Jagiełło. The king also attached the Church formally to the Jagiellonian University by giving it the right to nominate the parish priest. In 1428 the choir was reconstructed and enlarged. By a charter dated 27 October 1535, St. Anne's was raised to the rank of a collegiate church.\nIn 1689 the Gothic edifice was demolished as it proved too small for the growing cult of Saint John Cantius, the patron saint of the Jagiellonian University who's laid to rest there. In 1689–1705 the new Baroque church was erected, modelled on Sant'Andrea della Valle in Rome. The architect was a Polonized Dutchman Tylman van Gameren, a chief architect at the court of John III Sobieski. The interior stucco decoration is the work of Baldassarre Fontana, and the polychromy assisted by painters and brothers Carlo and Innocente Monti and Karl Dankwart of Nysa. The painting of St. Anne in the high altar is the work of Jerzy Siemiginowski-Eleuter, court painter of King John III Sobieski. The 18th-century paintings in the stalls showing the life of Saint Anne are by Szymon Czechowicz. In the transept there is an altar of the adoration of the cross to the left, and the tomb of John Cantius to the right.",
+   "timestamp": "2026-07-06T16:54:42Z",
+   "title": "Church of St. Anne, Kraków",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Church_of_St._Anne,_Krak%C3%B3w"
+  },
+  "Q11746949": {
+   "chars": 277,
+   "fullChars": 277,
+   "pageid": 82813645,
+   "qid": "Q11746949",
+   "revid": 1354583709,
+   "text": "The Church of St. Joseph (Polish: Kościół św. Józefa), known colloquially as the Bernardine Sisters Church (Polish: Kościół bernardynek) is a historic Roman Catholic conventual church of the Bernardine Sisters (OSFB) located at 21 Poselska Street in Old Town of Kraków, Poland.",
+   "timestamp": "2026-05-17T07:15:28Z",
+   "title": "Church of St. Joseph, Kraków (Old Town)",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Church_of_St._Joseph,_Krak%C3%B3w_(Old_Town)"
+  },
+  "Q1237964": {
+   "chars": 562,
+   "fullChars": 562,
+   "pageid": 55178106,
+   "qid": "Q1237964",
+   "revid": 1372814984,
+   "text": "The Church of the Holy Trinity (Polish: Kościół Świętej Trójcy), known colloquially as the Dominicans Church (Polish: Kościół dominikanów) is a historic Roman Catholic conventual church of the Order of Preachers located at 12 Stolarska Street in the Old Town of  Kraków, Poland. \nBuilt in a gothic style, it also houses a monastery of the Order of Preachers. Its history dates from the year 1223.\nSaint Hyacinth of Poland is buried in the church, as well as Polish monarch Leszek II the Black, Renaissance humanist Filippo Buonaccorsi and Jan Zygmunt Skrzynecki.",
+   "timestamp": "2026-09-02T11:59:04Z",
+   "title": "Church of the Holy Trinity, Kraków (Old Town)",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Church_of_the_Holy_Trinity,_Krak%C3%B3w_(Old_Town)"
+  },
+  "Q1328725": {
+   "chars": 3560,
+   "fullChars": 3560,
+   "pageid": 22657559,
+   "qid": "Q1328725",
+   "revid": 1354747267,
+   "text": "The Church of St. Francis of Assisi (Polish: Kościół św. Franciszka z Asyżu) and Friary of the Conventual Friars Minor located in the Old Town district of Kraków, Poland, are a Roman Catholic religious complex on the west side of All Saints Square at Franciszkańska 2, across the street from the Bishop's Palace in Krakow – which served as the residence of Pope John Paul II during his stays in the city. The Church dates back to the 13th century. The saint Maximilian Kolbe was a friar there in 1919, and led his first service at this church upon Poland's return to sovereignty.\n\n== History ==\nThere is no consensus among historians about the church's founder. He was probably Duke Henry II the Pious (1196–1241), son of Prince Henry the Bearded (1165–1238) who resided in Kraków and also previously invited the Franciscans to Wrocław. His wife, Anna (daughter of the Bohemian King Premysl Otakar I), and especially her sister Agnes (Agnieszka) contributed as well. However, widely regarded as the founder is also Duke Bolesław V the Chaste with his wife St. Kinga, especially in the construction and reconstruction of the church and monastery after the devastation of the first Mongol invasion of Poland in 1241.\nThe Church was one of the first tall brick-and-sandstone buildings in the city. The original 13th-century Gothic structure was consecrated before 1269, and expanded in 1260–70. Not much remains from that particular period other than the ribbed 13th-century vault. Presbytery was elongated beginning in 1401 with the three-sided apsis (pictured). The cross-shaped central part with nave arcades was added around 1420–36 (the original chancel was straight). The annexes gave the temple a shape of a Greek cross for the first time. The expansion was re-consecrated by Cardinal Zbigniew Oleśnicki in 1436. In spite of various calamities (1462, 1476, 1655), the Church of St. Francis of Assisi and the adjacent Monastery experienced the most destructive fire only in 1850. The written records of its consecration along with priceless artifacts were lost.\nFor the Franciscan Order in Poland the period of foreign partitions was deadly. By 1864, from over 90 Franciscan monasteries only 8 remained in the country including the one in Kraków. The situation slightly improved after the Austro-Prussian War. In 1866, Austria granted a degree of autonomy to Kraków after its own massive defeat. In 1895, the eastern part of the church received murals with floral motifs by the founder of Young Poland, Stanisław Wyspiański. Wyspiański was also the author of magnificent stained glass windows in the apse, manufactured at the Innsbruck foundry in 1899–1904. The re-consecration of the renovated church by Bishop of Kraków, Anatol Nowak, took place on 14 June 1908. It was promoted to the rank of Basilica Minor on 23 February 1920.\n\n== Shroud of Turin exact replica ==\nThe Franciscan Basilica is in possession of the certified copy of the Shroud of Turin, located in the Chapel of the Passion. It is placed at the main altar of the chapel (pictured) for all guest and parishioners to examine. The replica was consecrated by Pope John Paul II at the Vatican on 19 March 2003; and the ceremonial unveiling by Cardinal Franciszek Macharski of Kraków took place on 14 April 2003.The Shroud of Turin is a burial linen 4.36 by 1.10 metres (14.3 by 3.6 ft) large, with the reverse image of a man, believed to be the deceased Christ, who, according to tradition, was wrapped in it and placed in the tomb. In the middle is the apparent imprint of the face of Christ.",
+   "timestamp": "2026-05-18T01:57:10Z",
+   "title": "Basilica of St. Francis of Assisi, Kraków",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Basilica_of_St._Francis_of_Assisi,_Krak%C3%B3w"
+  },
+  "Q2983000": {
+   "chars": 3838,
+   "fullChars": 3838,
+   "pageid": 10777291,
+   "qid": "Q2983000",
+   "revid": 1362855230,
+   "text": "The Collegium Novum (Latin: \"New College\") is the Neo-Gothic historic main building of the Jagiellonian University located at 24 Gołębia Street in the Old Town of Kraków, Poland.\nOriginally built between the year 1363 and 1365 and after its destruction, rebuilt in between 1873 and 1887. Based on a design by architect Feliks Księżarski to match the oldest building of the university, it was opened for the 500th anniversary of the university's foundation. The Collegium Novum replaced a former academic boarding school called Jeruzalem, consumed by fire in the mid-19th century.\nThe building contains lecture rooms including an impressive assembly hall (called Aula), Rector's, Deans', and other university authorities' offices as well as those of a number of prominent professors. It is the Jagiellonian University's administrative centre.\n\n== History ==\nCollegium Novum was opened on June 14, 1887, commencing several years of debate and construction. The decision regarding the allocation of subsidies was made in the Austro-Hungarian capital of Vienna, with the university's vital interests defended by Julian Dunajewski, the then Austrian Finance Minister. The work might not have begun at all had it not been for his commitment, as well as that of his brother Cardinal Albin Dunajewski.\nAlready at the time of its grand opening, the assembly hall (Aula) of the new building was too small to accommodate all guests on all occasions, even though the number of students did not exceed 1200 with approximately one hundred professors. A debate arose whether it was necessary to invite professors' wives to grand ceremonies. Most academics, in keeping with the prevailing trend of the time, were against the inviting of women guests. In the university's archives there is a formal invitation reading: “Zoll requires no ticket and wishes the ceremony to be exclusively male.” In another statement, Edward Janczewski “expresses his opposition to the idea of admitting ladies to the ceremonies.” \nUntil the end of First World War, a portrait of emperor Franz Joseph I of Austria, painted by Kazimierz Pochwalski, hung in the Aula of the Collegium. On October 31, 1918, a group of university students tore it to pieces, manifesting their determination for the recreation of an independent Republic of Poland. However, a number of other paintings did survive, including portraits of the university's founding fathers Casimir the Great and Władysław Jagiełło dating back to the early 1860s, a picture of Queen Jadwiga painted in 1900 to celebrate her Jubilee, as well as the works of  Jan Matejko, including his painting entitled Copernicus: Conversation with God. The chairs in the assembly hall were designed by Tadeusz Stryjeński.\nOn the upper floor of the college there is a lecture hall named after Józef Szujski – now used by historians – with the commemorative plaque in remembrance of the events surrounding Nazi German action called Sonderaktion Krakau where 183 professors were arrested and later sent to camps in Sachsenhausen and Dachau. The plaque reads: \"For the freedom of spirit and service to science and nation of Jagiellonian University professors deceitfully and forcefully taken away from this hall and imprisoned by the Nazi occupant on November 6, 1939.\"\nThe restoration of the Neo-Gothic architectural structure took place at the end of the 20th century. It was faced with a number of challenges, notably the task of reviving the original form of the building while simultaneously improving its functionality as an educational facility. The restoration was carried out on its façade in 1994 along with the modernization of the assembly hall, which was completed in 1999. The collaboration of specialists from various disciplines allowed for both restoration and functional needs of the Collegium to be met successfully.",
+   "timestamp": "2026-07-06T17:01:07Z",
+   "title": "Collegium Novum",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Collegium_Novum"
+  },
+  "Q4865820": {
+   "chars": 4684,
+   "fullChars": 4684,
+   "pageid": 8918905,
+   "qid": "Q4865820",
+   "revid": 1364577096,
+   "text": "Bartłomiej Nowodworski Lyceum (Polish: I Liceum Ogólnokształcące im. Bartłomieja Nowodworskiego; unofficially known as the Nowodworek) in Kraków, Poland, is one of the oldest secondary schools in Poland. Its current location is on Na Groblach Square, just across the Planty from the Kraków Old Town and a few hundred meters from Wawel Castle.\n\n== History ==\nThe Senate of the Jagiellonian University decided to establish a school preparing students (boys only)  for further education at the university level on 5 May 1586. The school was opened in 1588.  Bartłomiej (Bartholomew) Nowodworski (born ca. 1552, died 13 February 1625), Polish nobleman, courtier and officer, endowed it in 1617 and 1619, thus enabling its further expansion. In recognition of  his contribution, the school became known as Collegium Nowodworskiego, renamed to Liceum św. Anny (St. Anne's Lyceum) in 1818, and to c.k. Gimnazjum św. Anny (Imperial and Royal St. Anne's Gymnasium) in 1850.  In 1898 the school, until then located in the university area, moved to its present building in Plac na Groblach (architect Józef Sare).\nHenryk Sędziwy was the principal of the school between 1948 and 1971. Girls were admitted to the school for the first time in 1962.\n\n== School's traditions ==\n\n=== Nowodworski Choir ===\nIn 1986 as the 400th anniversary of the school was coming close (1988) many of the old school's traditions were reactivated. One of   them was Nowodworski Choir. The first supervisor was Zbigniew Toffel, and since 1992 the conductor has been Ryszard Źróbek.\n\n=== Nowodworski Nativity Satirical Show ===\nIt is an annual tradition, usually just before the Christmas  break, that the pupils prepare the \"Nowodworian Crib\" [1]: a Comedy show showing the school life in a satirical way. The actors parody their teachers and often some memorable school happenings; sometimes you can find allusions to the current political and cultural situation in Poland and in the World. All the students, teachers and former pupils make the audience. It was first shown in 1963, initially as a secret from the teachers, but soon became a yearly tradition looked forward to by students, as well as by teachers.\n\n== Notable alumni ==\nJan III Sobieski – King of Poland, military leader of European forces at the Battle of Vienna in 1683\nStanisław Trembecki – poet of the Polish Enlightenment\nJan Śniadecki – scientist of the Polish Enlightenment\nJędrzej Śniadecki – chemist, doctor, biologist, philosopher\nWojciech Bogusławski – \"Father of Polish theatre\"; director of the Polish National Theatre\nJózef Bem – Independence fighter, general of the Polish and Hungarian Army\nJoseph Conrad – writer; author of famous novels, such as Heart of Darkness and The Secret Agent\nStefan Banach – mathematician (creator of functional analysis)\nJózef Kenig – journalist, publicist, editor of Gazeta Warszawska\nWładysław Ludwik Anczyc – poet, playwright\nJan Matejko – painter of Polish historical scenes and portraits of all the Polish kings\nJózef Mehoffer – painter and decorative artist\nStanisław Wyspiański – playwright, painter and poet\nMichał Bałucki – playwright and poet\nKazimierz Przerwa-Tetmajer – poet, novelist\nJacek Rajchel – geologist, author\nLucjan Rydel – poet\nTadeusz Boy-Żeleński – critic, journalist, Mloda Polska satirist, translator\nIgnacy Daszyński – politician, journalist and Prime Minister in 1918\nLeon Schiller – theatre and film director\nAdam Pragier - leading socialist politician, member of the Sejm, minister in exile, publicist and writer\nJozef Retinger - linguist, geopolitician, adviser to the Polish government-in-exile, co-founder of various European institutions\nKazimierz Nitsch – historian and linguist, professor of Jagiellonian University and Lwow University\nJuliusz Osterwa – theatre actor and director\nGustaw Holoubek – actor and director, member of The Polish Parliament and The Senate.\nWalery Goetel – geologist and palaeontologist; researcher of geological structure of the Tatra Mountains\nSławomir Mrożek – dramatist and writer\nAntoni Kępiński – psychiatrist; known for information metabolism and axiological psychiatry\nMichał Rola-Żymierski Marshall\nRoman Młodkowski – journalist and co-founder of Polish news television TVN24\nWawrzyniec Styczeń – social activist, lawyer, and president of the Kraków branch of Sokół\nJerzy Vetulani – pharmacologist and biochemist\nAndrzej Trybulec – mathematician, founder of MIZAR formalization system\nAgata Kornhauser-Duda – First Lady of Poland\nAdam Buksa - footballer, forward at New England Revolution\nStanisław Moskal – scientist and writer\nEdmund Matejko – insurgent and teacher, older brother of the painter Jan Matejko\nKazimierz Opałek – jurist",
+   "timestamp": "2026-07-17T09:03:19Z",
+   "title": "Bartłomiej Nowodoworski 1st Secondary School in Kraków",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Bart%C5%82omiej_Nowodoworski_1st_Secondary_School_in_Krak%C3%B3w"
+  },
+  "Q616675": {
+   "chars": 3631,
+   "fullChars": 3631,
+   "pageid": 37861454,
+   "qid": "Q616675",
+   "revid": 1364123457,
+   "text": "The Bishop's Palace in Kraków (Polish: Pałac Biskupi w Krakowie) is the seat of Kraków metropolitan Curia, Poland, and the traditional residence of Kraków bishops since the late 14th century. It is the second largest palace in the city after Wawel, the former seat of the Polish monarchs. It is part of a monastery complex of the Franciscan religious order. Bishop's Palace is best known for being the residence of Pope John Paul II during his stays in the city. He used to give his blessings and talk to his followers from a window above the main entrance at night.\nAs of March 2022, the archbishop is Marek Jedraszewski.\n\n== History ==\n\nBefore the palace was built, the bishopric of Kraków had been located at Wawel since 1000, where the remains of earlier buildings still exist. The palace is erected in its present location at ul. Franciszkańska 3 street, across from the historic Franciscan Church in Kraków, was mentioned for the first time in the 14th century. It was consumed by fire in 1462 and then rebuilt. The palace was reconstructed with a new staircase and rusticated portals by Bishop Piotr Gembicki in 1642-1647. It was renovated after the Swedish invasion in 1655, and refurbished again in 1817-1820 by Szczepan Humbert. In 1850, a citywide fire burned most of the furnishings and exhibits of national mementoes. Architect Tomasz Pryliński supervised the renovation of the palace in 1881–1884. Despite its turbulent history, including fires and various national calamities such as the Partitions, the palace always served its original purpose.\nIn March 2022, Archbishop Marek Jedraszewski welcomed some refugees from the 2022 Russian invasion of Ukraine to live with him there.\n\n== Architecture ==\nThe palace is a well-preserved example of 19th-century architecture, with elements of Polish Renaissance and Baroque decorations, including an arcaded loggia in the courtyard, added by architect Gabriel Słoński around 1567. The general layout of the palace established by the mid-17th century remains unchanged despite later renovations.\n\n== John Paul II ==\n\nThe palace, usually closed to visitors except for a museum, is one of the more popular religious destinations connected with the life of Pope John Paul II. Between 1958 and 1978, the palace was a residence of Cardinal Karol Wojtyła, who in October 1978 became the first Slavic Pope in history, adopting the name John Paul II. Wojtyła had first lived in the complex during World War II, when he was a student of the clandestine Kraków Archdiocese Seminary run by Cardinal Adam Stefan Sapieha during the Nazi Occupation of Poland. Following an August 6, 1944, Nazi roundup of thousands of men and boys in Kraków, in which Wojtyła narrowly escaped capture, Sapieha insisted that the seminary students stay in the Bishop's Palace until the Germans left the city. Wojtyła was ordained to the priesthood soon after the end of the war, on November 1, 1946, by Sapieha in his private chapel. Housed not far from the palace (at ul. Kanonicza 19 street) is the Archdiocesan Museum (Polish: Muzeum Archidiecezjalne), where many relevant artifacts can be found.\nFollowing John Paul II's death on 2 April 2005, some 40,000 Catholics gathered before the palace for a night vigil and prayer (pictured). On each anniversary of his death, thousands of flowers are placed around the building, and many fires are lit. The window above the entrance is known as the \"papal window,\" as John Paul II spoke to the crowds that gathered to see him from here. In the courtyard stands a statue of John Paul II, sculpted and gifted to the palace by artist Jole Sensi Croci in May 1980.",
+   "timestamp": "2026-07-14T17:10:42Z",
+   "title": "Bishop's Palace, Kraków",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Bishop%27s_Palace,_Krak%C3%B3w"
+  },
+  "Q7029919": {
+   "chars": 524,
+   "fullChars": 524,
+   "pageid": 24856948,
+   "qid": "Q7029919",
+   "revid": 1269386102,
+   "text": "The Nicolaus Copernicus Monument in Kraków (Polish: Pomnik Mikołaja Kopernika) is a notable landmark of Kraków, Poland.  It memorializes the astronomer Copernicus, who studied at the Kraków Academy and whose father came from that city, then the capital of Poland.\nThe statue, designed by sculptor Cyprian Godebski in 1899, was completed in 1900. It originally stood in the courtyard of the Jagiellonian University's Collegium Maius. In 1953 it was moved to Kraków's Planty Park, in front of the Collegium Witkowski building.",
+   "timestamp": "2025-01-14T12:01:02Z",
+   "title": "Nicolaus Copernicus Monument, Kraków",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus_Monument,_Krak%C3%B3w"
+  },
+  "Q919596": {
+   "chars": 1871,
+   "fullChars": 1871,
+   "pageid": 8644319,
+   "qid": "Q919596",
+   "revid": 1354364199,
+   "text": "The Collegium Maius (Latin for \"Great College\") located in Kraków Old Town, Poland, is the Jagiellonian University's oldest building, dating back to the 14th century. It stands at the corner of ulica Jagiellońska (Jagiellon Street) and ulica Świętej Anny (St. Anne Street) near the Main Square of the historic city centre. Collegium Maius is the location of the Jagiellonian University Museum (Polish: Muzeum Uniwersytetu Jagiellońskiego), a registered museum established on the initiative of Prof. Karol Estreicher after meticulous restorations which lasted from 1949 through 1964, bringing the edifice back to its original look from before 1840.\n\n== History ==\nThe then 36-year-old first university in Poland, known at the time as Akademia krakowska (English: the Krakow Academy), moved into the building some time in the 14th century after King Władysław II Jagiełło had purchased it as an educational grant with funds bequeathed by his late wife, Queen Jadwiga.\nThe Collegium Maius was rebuilt in the late 15th century as a late-Gothic structure surrounding a large courtyard bordered with arcades. In 1517 a well was built in the center of the courtyard. Professors lived and worked upstairs, while lectures were held downstairs.\nIn the 1490s the Collegium Maius counted among its students Nicolaus Copernicus, the Renaissance astronomer and polymath who would revolutionize European ideas about the universe.\n\n== Cultural significance ==\nThe Collegium Maius Museum features lecture rooms, communal halls, professors’ quarters, a library and a treasury containing rectors' Gothic maces and the Jagiellonian globe. Exhibits also include medieval scientific instruments, globes, paintings, collectibles, furniture, coins and medals.\n\n== Jagiellonian University Museum Directors ==\nKarol Estreicher (1951–1976)\nStanisław Waltoś (1977–2011)\nKrzysztof Stopka (since 2012)",
+   "timestamp": "2026-05-15T23:26:36Z",
+   "title": "Collegium Maius, Kraków",
+   "truncated": false,
+   "url": "https://en.wikipedia.org/wiki/Collegium_Maius,_Krak%C3%B3w"
+  }
+ }
+}

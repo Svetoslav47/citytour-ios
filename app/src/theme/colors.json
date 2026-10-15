@@ -1,0 +1,42 @@
+{
+ "light": {
+  "bg_canvas": "#F4F5F3",
+  "bg_surface": "#FFFFFF",
+  "bg_surface_sunken": "#EEEFEC",
+  "bg_scrim": "#C2F4F5F3",
+  "bg_overlay_button": "#0E16181A",
+  "text_primary": "#16181A",
+  "text_secondary": "#5A6066",
+  "text_tertiary": "#6B7176",
+  "divider": "#E1E3DF",
+  "accent": "#1D6B5B",
+  "on_accent": "#FFFFFF",
+  "accent_subtle": "#E3F0EC",
+  "map_user": "#2F6FDE",
+  "map_land": "#EEEEEA",
+  "signal_simulated_fg": "#7A4F00",
+  "signal_simulated_bg": "#FFF1D6",
+  "signal_warning_bg": "#FFF6E5",
+  "signal_error": "#B3261E"
+ },
+ "dark": {
+  "bg_canvas": "#0F1112",
+  "bg_surface": "#1A1D1F",
+  "bg_surface_sunken": "#24292C",
+  "bg_scrim": "#C20F1112",
+  "bg_overlay_button": "#14ECEEEF",
+  "text_primary": "#ECEEEF",
+  "text_secondary": "#A7ADB2",
+  "text_tertiary": "#858C91",
+  "divider": "#2E3336",
+  "accent": "#6CC3AE",
+  "on_accent": "#062A23",
+  "accent_subtle": "#17332D",
+  "map_user": "#5C93F0",
+  "map_land": "#151819",
+  "signal_simulated_fg": "#F2C46B",
+  "signal_simulated_bg": "#3A2C0D",
+  "signal_warning_bg": "#2E2716",
+  "signal_error": "#F2B8B5"
+ }
+}

@@ -1,0 +1,145 @@
+{
+ "meta": {
+  "count": 11,
+  "endpoint": "https://zh.wikipedia.org/w/api.php?action=query&prop=extracts%7Crevisions%7Cinfo&explaintext=1&exsectionformat=wiki&rvprop=ids%7Ctimestamp&inprop=url&redirects=1&format=json&formatversion=2&titles={title}&variant=zh-hans",
+  "licence": "CC BY-SA 4.0, Wikipedia contributors",
+  "missing": [],
+  "processing": "whole article as plain text with \"== Heading ==\" lines; trailing link/reference sections dropped; capped at 6000 chars on a paragraph or sentence end (truncated=true)",
+  "retrievedAt": "2026-10-03T14:11:07Z",
+  "source": "zh.wikipedia.org action API, prop=extracts (plain text) + revisions + info"
+ },
+ "pages": {
+  "Q1072350": {
+   "chars": 629,
+   "fullChars": 629,
+   "pageid": 1217117,
+   "qid": "Q1072350",
+   "revid": 94673535,
+   "text": "纺织会馆（波兰语：Sukiennice）是波兰克拉科夫的一座文艺复兴建筑，位于克拉科夫老城中心处的中央集市广场，是该市最显著的地标之一。这里曾经是国际贸易的主要中心。客商在那里会见，洽谈业务和易货贸易。在15世纪的黄金时代，纺织会馆是来自东方的各种外来货物的进口来源——香料、丝绸、皮革和蜡——而克拉科夫本身出口纺织品、铅和来自维利奇卡盐矿的盐。  \n文艺复兴时期之前，克拉科夫——波兰的皇家首都——已经是欧洲最壮丽的城市之一。但是，它的繁荣没有持续下去。18世纪末导致瓜分波兰的战争和政治，加快了该市的衰落。至1870年，在奥匈帝国统治下，纺织会馆进行了修复。大部分古老的市中心衰败了；然而，加利西亚和洛多梅里亚王国政治命运的改变带来了该市的复兴，由于新成立的立法大会（Sejm），纺织会馆的成功修复是这一时期最值得骄傲的成就之一。 \n\n数百年来，纺织会馆曾招待过无数的嘉宾，目前仍用于款待君主和知名人士。2002年，此处曾招待查尔斯王子和日本明仁天皇。在此举行的舞会中，最著名的是1809年约泽夫·波尼亚托夫斯基亲王从奥地利帝国手中解放该市后。除了它的宏伟的历史和巨大的文化价值，纺织会馆还是繁华的商业中心，虽然是出售的物品与以前的世纪完全不同——主要是游客纪念品。\n类似的纺织会馆也存在于其它欧洲城市，例如比利时伊佩尔纺织会馆、德国不伦瑞克和英国利兹第一白布馆（1st White Cloth Hall），但是克拉科夫的纺织会馆最为著名，保存也最完好。",
+   "timestamp": "2026-09-30T18:31:50Z",
+   "title": "纺织会馆 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E7%BA%BA%E7%BB%87%E4%BC%9A%E9%A6%86_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q1143171": {
+   "chars": 271,
+   "fullChars": 271,
+   "pageid": 968180,
+   "qid": "Q1143171",
+   "revid": 89952676,
+   "text": "圣母大殿（波兰语：Kościół Mariacki）是波兰城市克拉科夫的一座砖砌哥特式教堂，兴建于14世纪，位于中央集市广场。高80米，以法伊特·施托斯的哥特式木制祭坛而著称。\n每隔1个小时，从钟楼顶部都会响起号角声。哀怨的曲调在中途中断，以纪念13世纪的著名号手，他在蒙古人袭击城市时，发出警报，而被弓箭射中喉咙。在中午，号角声由波兰国家电台1台向波兰国内外现场直播。\n圣母大殿的建筑为海外波兰人修建的许多教堂所模仿，例如芝加哥的圣弥额尔总领天使堂和St. John Cantius，其设计风格称为“波兰主教座堂风格”。\n\n== 图片 ==",
+   "timestamp": "2025-11-12T21:17:43Z",
+   "title": "圣母圣殿 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E6%AF%8D%E5%9C%A3%E6%AE%BF_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q1195738": {
+   "chars": 270,
+   "fullChars": 270,
+   "pageid": 968298,
+   "qid": "Q1195738",
+   "revid": 89172609,
+   "text": "圣安德肋教堂（波兰语：Kościół św. Andrzeja w Krakowie）是波兰克拉科夫城的一座罗曼式天主教教堂，兴建于1079－1098年。这是罕见的现存欧洲堡垒式教堂之一，也是克拉科夫唯一一座经历了1241年蒙古人进攻而幸存的教堂。其立面较宽阔部份的底部设有小开口，在该教堂充当战乱避难处时用作防御窗。\n圣安德肋教堂是克拉科夫最古老的建筑和波兰保存最完好的罗曼式建筑之一。从1320年起归属圣Klara会。这座建筑已经修复过多次。目前其内部的装饰、绘画和镀金祭坛均为巴洛克式风格。1639年，八角形塔楼上又增加了巴洛克圆顶。",
+   "timestamp": "2025-09-17T05:24:59Z",
+   "title": "圣安德肋教堂 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E5%AE%89%E5%BE%B7%E8%82%8B%E6%95%99%E5%A0%82_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q1363724": {
+   "chars": 376,
+   "fullChars": 376,
+   "pageid": 4488930,
+   "qid": "Q1363724",
+   "revid": 89952710,
+   "text": "圣福里安门(波兰语：Brama Floriańska)位于波兰克拉科夫，是一座著名的波兰哥特式塔楼，建于14世纪初，使用红色花岗岩砌筑，是克拉科夫老城防御工事的一部分。\n\n1241年，鞑靼人摧毁了大半个城市，1285年修建防御工事，圣福里安门以圣徒福里安命名，为克拉科夫老城的主要入口。上有圣徒福里安雕像。\n塔楼高33.5米。克拉科夫的皇家之路始于圣福里安门，经圣福里安街（ulica Floriańska）通往中央集市广场（波兰语：Rynek Główny w Krakowie）。\n\n== 参考 ==\n\n（波兰语） About Florian Gate and the City Walls at www.krakow4u.pl（页面存档备份，存于互联网档案馆）\nAbout Florian Gate at www.cracowonline.com",
+   "timestamp": "2025-11-12T21:21:18Z",
+   "title": "圣福里安门",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E7%A6%8F%E9%87%8C%E5%AE%89%E9%97%A8"
+  },
+  "Q1786361": {
+   "chars": 211,
+   "fullChars": 211,
+   "pageid": 1217133,
+   "qid": "Q1786361",
+   "revid": 93106217,
+   "text": "市政厅钟楼（波兰语：Wieża ratuszowa w Krakowie）是位于波兰克拉科夫旧城区的钟楼建筑，是中央集市广场的主要焦点。 \n这座钟楼是1820年因开辟广场而拆除的老市政厅唯一保留下来的部分。它的地下室曾经是带有中世纪刑场的监狱。 \n这座宏伟的哥特式建筑建于13世纪末，用石头和砖砌筑，高70米，倾斜55厘米，是1703年风暴的结果。钟楼顶层的观察平台对游客开放。\n市政厅钟楼是克拉科夫历史博物馆的一个分馆。",
+   "timestamp": "2026-06-17T18:20:34Z",
+   "title": "市政厅钟楼 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%B8%82%E6%94%BF%E5%8E%85%E9%92%9F%E6%A5%BC_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q338657": {
+   "chars": 220,
+   "fullChars": 220,
+   "pageid": 1652603,
+   "qid": "Q338657",
+   "revid": 94698325,
+   "text": "圣伯多禄圣保禄堂（波兰语：Kościół ŚŚ Piotra i Pawła w Krakowie）是位于波兰克拉科夫老城的天主教会教堂，也是该市（也许是全波兰）第一座纯粹的巴洛克风格建筑。位于Grodzka街54号。它由齐格蒙特三世为耶稣会建于1597–1619年。1635年7月8日祝圣。它在克拉科夫的老教堂中座位数最多。   \n1809–1815年，此堂曾改为东正教堂。自1842年以来，它属于天主教诸圣堂区。1960年升为宗座圣殿。",
+   "timestamp": "2026-10-02T01:03:58Z",
+   "title": "圣伯多禄圣保禄圣殿 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E4%BC%AF%E5%A4%9A%E7%A6%84%E5%9C%A3%E4%BF%9D%E7%A6%84%E5%9C%A3%E6%AE%BF_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q348381": {
+   "chars": 715,
+   "fullChars": 715,
+   "pageid": 8141017,
+   "qid": "Q348381",
+   "revid": 93944540,
+   "text": "克拉科夫亚当·密茨凯维奇纪念碑（波兰语：pomnik Adama Mickiewicza w Krakowie）是波兰最著名的青铜纪念碑之一，也是一处受欢迎的聚会地点，位于克拉科夫老城的中央集市广场。\n\n== 历史 ==\n1898年6月16日，19世纪最伟大的波兰浪漫主义诗人亚当·密茨凯维奇诞辰100周年之际，他的雕像揭幕，他的女儿和儿子到场。它是由当时鲜为人知的雕刻家特奥多尔·雷吉尔设计，他在第三次也是最后一次竞赛中击败了总共60多名艺术家，包括著名画家扬·马泰伊科。\n尽管一等奖授予了来自巴黎的圣彼得堡帝国艺术学院的著名教授塞普里安·戈德布斯基，雷吉尔紧随其后，但是后者的设计更受欢迎，并于1889年11月签订了合同。诗人的脚下有四组寓言人物，分别象征着祖国（面向干草街，Ulica Sienna）、科学（朝北）、勇气（面向纺织会馆）和诗歌（朝南，面向圣亚德伯堂）。底座上的铭文写着：“献给亚当·密茨凯维奇，国家”。\n这座纪念碑是在一个艺术委员会的监督下，在Długa街的一个工作室里建成的。所有的雕像都是在罗马的Nellich铸造厂铸造的。纪念碑的最终位置没有立即确定，至少还考虑过另外三个广场。最终，市长建议将其安放在中央集市广场。\n1940年，德国入侵波兰后，纳粹摧毁了纪念碑。1955年纪念碑修复。大多数雕像都是1946年从汉堡的废金属堆中复原的。\n\n== 文化意义 ==\n亚当·密茨凯维奇本人从未去过克拉科夫。1890年，即他去世35年后，他的遗体从巴黎运到那里，隆重地安放在圣达尼老圣文策老圣殿总主教座堂（瓦维尔主教座堂）下面的圣良纳墓穴中。每年圣诞前夜，克拉科夫的花店都会用鲜花装饰亚当·米奇维茨纪念碑。 。",
+   "timestamp": "2026-08-18T19:08:19Z",
+   "title": "亚当·密茨凯维奇纪念碑 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E4%BA%9A%E5%BD%93%C2%B7%E5%AF%86%E8%8C%A8%E5%87%AF%E7%BB%B4%E5%A5%87%E7%BA%AA%E5%BF%B5%E7%A2%91_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  },
+  "Q743704": {
+   "chars": 216,
+   "fullChars": 216,
+   "pageid": 1218869,
+   "qid": "Q743704",
+   "revid": 89969007,
+   "text": "瓦维尔山（波兰语：Wawel，或 Wzgórze wawelskie）是波兰城市克拉科夫中位于维斯瓦河左岸的一座石灰岩小山，紧邻克拉科夫旧城区，海拔228米。自旧石器时代起，山上就有人类居住。山上坐落着瓦维尔城堡和瓦维尔主教座堂，其中瓦维尔城堡曾是波兰王室的居所，因而使瓦维尔山成为中世纪波兰的象征。波兰王室和许多名人安葬在瓦维尔主教座堂。从1320年起，波兰君主在此加冕。\n\n瓦维尔城堡\n瓦维尔主教座堂\n若望保禄二世主教座堂博物馆",
+   "timestamp": "2025-11-13T16:21:51Z",
+   "title": "瓦维尔山",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E7%93%A6%E7%BB%B4%E5%B0%94%E5%B1%B1"
+  },
+  "Q807309": {
+   "chars": 274,
+   "fullChars": 274,
+   "pageid": 4489167,
+   "qid": "Q807309",
+   "revid": 89949164,
+   "text": "克拉科夫瓮城（波兰语：barbakan krakowski）是一座曾经与城墙及圣福里安门相连的瓮城，控制进入克拉科夫老城的入口。，建于1498年，是克拉科夫城墙残留的少量遗迹之一 现在是一处旅游景点，举办各种展览。\n\n== 参考 ==\n\nMarek Żukow-Karczewski, \"Barbakan\" (The Barbican), Magazyn Kulturalny \"KRAKÓW\"; Special Edition (English-language version) \"KRAKÓW\" Magazine, Kraków, 1991.",
+   "timestamp": "2025-11-12T16:40:47Z",
+   "title": "克拉科夫瓮城",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB%E7%93%AE%E5%9F%8E"
+  },
+  "Q8255537": {
+   "chars": 157,
+   "fullChars": 157,
+   "pageid": 8140866,
+   "qid": "Q8255537",
+   "revid": 89952114,
+   "text": "咏祷司铎街（波兰语：Ulica Kanonicza）是波兰克拉科夫的一条古老街道，曾经是Okół 村的一部分，1401年与克拉科夫相连。沿街建筑原为主教座堂咏祷司铎的住所，许多巴洛克建筑和文艺复兴建筑保留至今。\n这条街的南端原为波波茨纳门，已在克拉科夫城市现代化进程中拆除。\n\n== 建筑 ==\n\n== 参考 ==",
+   "timestamp": "2025-11-12T20:21:26Z",
+   "title": "咏祷司铎街",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%92%8F%E7%A5%B7%E5%8F%B8%E9%93%8E%E8%A1%97"
+  },
+  "Q898260": {
+   "chars": 113,
+   "fullChars": 113,
+   "pageid": 1652572,
+   "qid": "Q898260",
+   "revid": 89952522,
+   "text": "圣亚德伯堂（波兰语：Kościół św. Wojciecha）位于克拉科夫老城，欧洲最大的中世纪广场中央集市广场的东南角，是波兰最古老的石砌教堂之一。\n圣亚德伯堂建于11世纪，得名于在异教的普鲁士殉道的传教士布拉格的亚德伯。",
+   "timestamp": "2025-11-12T21:02:13Z",
+   "title": "圣亚德伯堂 (克拉科夫)",
+   "truncated": false,
+   "url": "https://zh.wikipedia.org/wiki/%E5%9C%A3%E4%BA%9A%E5%BE%B7%E4%BC%AF%E5%A0%82_(%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB)"
+  }
+ }
+}

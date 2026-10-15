@@ -1,0 +1,375 @@
+{
+ "features": [
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       19.932403,
+       50.060026
+      ],
+      [
+       19.932022,
+       50.059957
+      ],
+      [
+       19.932052,
+       50.059882
+      ],
+      [
+       19.932153,
+       50.059901
+      ],
+      [
+       19.932137,
+       50.059941
+      ],
+      [
+       19.932215,
+       50.059955
+      ],
+      [
+       19.932279,
+       50.059819
+      ],
+      [
+       19.932477,
+       50.059859
+      ],
+      [
+       19.932476,
+       50.059861
+      ],
+      [
+       19.932461,
+       50.059894
+      ],
+      [
+       19.932466,
+       50.059895
+      ],
+      [
+       19.932425,
+       50.059987
+      ],
+      [
+       19.93242,
+       50.059986
+      ],
+      [
+       19.932418,
+       50.059991
+      ]
+     ],
+     [
+      [
+       19.932478,
+       50.060041
+      ],
+      [
+       19.932578,
+       50.059835
+      ],
+      [
+       19.932209,
+       50.059774
+      ],
+      [
+       19.93221,
+       50.059778
+      ],
+      [
+       19.93257,
+       50.059839
+      ],
+      [
+       19.932472,
+       50.06004
+      ],
+      [
+       19.932477,
+       50.060041
+      ]
+     ]
+    ],
+    "type": "MultiLineString"
+   },
+   "id": 1,
+   "properties": {
+    "ADRES": "STRASZEWSKIEGO 21",
+    "ATRYBUTY_O": "",
+    "BUDOWNICZY": "",
+    "CHARAKTER": "",
+    "DATA_WPISU": null,
+    "DATA_WZNIE": "",
+    "DZIELNICA": "I Stare Miasto",
+    "FID": 1,
+    "FUNKCJA_OB": "",
+    "FUNKCJA_PI": "",
+    "GDB_AREA": 0,
+    "GDB_PRM": 203.57,
+    "GDB_PRMEX": 203.57,
+    "GPT_DATE": 1557792000000,
+    "GPT_USER": "biernatm4",
+    "ID": 65772,
+    "IDENT_OBIE": "126105_9.0145.3",
+    "ID_ISDP": 2797,
+    "ID_SPRAWY": 73342699,
+    "ID_WARSTWY": "EG_dzialki",
+    "ISDP_FID": "GDB$G_EOZ_ZABYTKI_EOZ_ZABYT.4d9eef0c-ce3d-557a-e055-000000000001",
+    "ISTNIEJE": "Tak",
+    "KARTA_MAPY": "",
+    "LOKALIZACJ": "",
+    "MATERIAL": "",
+    "NAZWA": "",
+    "NUMER": "",
+    "NUMER_EWID": "",
+    "NUMER_REJ_": "A-914, 22.06.1992",
+    "OBREB": "",
+    "REJESTR_TA": "EWZAB",
+    "RODZAJE_ZA": "",
+    "RODZAJ_OBI": "",
+    "RODZAJ_WLA": "",
+    "STAN_ZACHO": "dobry",
+    "STATUS": "",
+    "STYL_OBIEK": "",
+    "SYMBOL_EWI": "",
+    "SYMBOL_REJ": "",
+    "Shape__Length": 316.865793964213,
+    "UWAGI": "",
+    "WIEK_CZ_PO": "w roku 1872 zbudowana, w roku 1875 dobudowa oficyny bocznej.",
+    "WIEK_POWST": "XX w.",
+    "WYDRUK_LIN": "",
+    "ZAJETA_NA_": 1,
+    "ZALACZNIKI": "",
+    "ZDJECIE_1": "http://172.16.11.149:4004/jackrabbit/repository/sowa/zabytki/zdjecia/Budynki/Straszewskiego/Straszewskiego|21.jpg",
+    "ZDJECIE_2": "",
+    "ZDJECIE_3": "",
+    "ZDJECIE_4": "",
+    "ZDJECIE_5": "",
+    "ZDJECIE_6": "",
+    "ZDJECIE_7": "",
+    "ZDJECIE_8": "",
+    "ZWERYFIKOW": "Nie",
+    "ZWIAZANA_Z": 1
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      19.928004,
+      50.072287
+     ],
+     [
+      19.927984,
+      50.072242
+     ],
+     [
+      19.927978,
+      50.072243
+     ],
+     [
+      19.927969,
+      50.072239
+     ],
+     [
+      19.927955,
+      50.072238
+     ],
+     [
+      19.927954,
+      50.072226
+     ],
+     [
+      19.927945,
+      50.072216
+     ],
+     [
+      19.927957,
+      50.072211
+     ],
+     [
+      19.92796,
+      50.072204
+     ],
+     [
+      19.927965,
+      50.072203
+     ],
+     [
+      19.927948,
+      50.072162
+     ],
+     [
+      19.92799,
+      50.072155
+     ],
+     [
+      19.927988,
+      50.072149
+     ],
+     [
+      19.927992,
+      50.072143
+     ],
+     [
+      19.927989,
+      50.072136
+     ],
+     [
+      19.928009,
+      50.072136
+     ],
+     [
+      19.928021,
+      50.072134
+     ],
+     [
+      19.928031,
+      50.07213
+     ],
+     [
+      19.92804,
+      50.072126
+     ],
+     [
+      19.928051,
+      50.072126
+     ],
+     [
+      19.92806,
+      50.072126
+     ],
+     [
+      19.928086,
+      50.072118
+     ],
+     [
+      19.928092,
+      50.072126
+     ],
+     [
+      19.928102,
+      50.072132
+     ],
+     [
+      19.928102,
+      50.072132
+     ],
+     [
+      19.928142,
+      50.072124
+     ],
+     [
+      19.928146,
+      50.072135
+     ],
+     [
+      19.928168,
+      50.072131
+     ],
+     [
+      19.928203,
+      50.072212
+     ],
+     [
+      19.928184,
+      50.072216
+     ],
+     [
+      19.9282,
+      50.072253
+     ]
+    ],
+    "type": "LineString"
+   },
+   "id": 2,
+   "properties": {
+    "ADRES": "KOBCIELNA 3",
+    "ATRYBUTY_O": "",
+    "BUDOWNICZY": "",
+    "CHARAKTER": "",
+    "DATA_WPISU": null,
+    "DATA_WZNIE": "",
+    "DZIELNICA": "V BobzLw",
+    "FID": 2,
+    "FUNKCJA_OB": "",
+    "FUNKCJA_PI": "",
+    "GDB_AREA": 0,
+    "GDB_PRM": 52.75,
+    "GDB_PRMEX": 52.75,
+    "GPT_DATE": 1590451200000,
+    "GPT_USER": "strzebka",
+    "ID": 67417,
+    "IDENT_OBIE": "126102_9.0004.104",
+    "ID_ISDP": 7951,
+    "ID_SPRAWY": 73610649,
+    "ID_WARSTWY": "EG_dzialki",
+    "ISDP_FID": "GDB$G_EOZ_ZABYTKI_EOZ_ZABYT.4d9eef0c-d804-557a-e055-000000000001",
+    "ISTNIEJE": "Tak",
+    "KARTA_MAPY": "",
+    "LOKALIZACJ": "",
+    "MATERIAL": "ceg",
+    "NAZWA": "",
+    "NUMER": "",
+    "NUMER_EWID": "",
+    "NUMER_REJ_": "",
+    "OBREB": "",
+    "REJESTR_TA": "EWZAB",
+    "RODZAJE_ZA": "",
+    "RODZAJ_OBI": "",
+    "RODZAJ_WLA": "",
+    "STAN_ZACHO": "dobry",
+    "STATUS": "",
+    "STYL_OBIEK": "",
+    "SYMBOL_EWI": "",
+    "SYMBOL_REJ": "",
+    "Shape__Length": 82.17016524052278,
+    "UWAGI": "",
+    "WIEK_CZ_PO": "w roku 1928 zbudowany, Styl: modernizm w charakterze dworkowym",
+    "WIEK_POWST": "XX w.",
+    "WYDRUK_LIN": "",
+    "ZAJETA_NA_": 1,
+    "ZALACZNIKI": "",
+    "ZDJECIE_1": "",
+    "ZDJECIE_2": "",
+    "ZDJECIE_3": "",
+    "ZDJECIE_4": "",
+    "ZDJECIE_5": "",
+    "ZDJECIE_6": "",
+    "ZDJECIE_7": "",
+    "ZDJECIE_8": "",
+    "ZWERYFIKOW": "Nie",
+    "ZWIAZANA_Z": 1
+   },
+   "type": "Feature"
+  }
+ ],
+ "meta": {
+  "count": 2,
+  "geometryType": "esriGeometryPolyline",
+  "item": {
+   "access": "public",
+   "accessInformation": null,
+   "itemId": "3c59629fc92b4925a59b7da5446782c3",
+   "itemPage": "https://www.arcgis.com/home/item.html?id=3c59629fc92b4925a59b7da5446782c3",
+   "licence": "UNVERIFIED",
+   "licenseInfo": null,
+   "modified": "2023-08-30T19:35:42.000Z",
+   "owner": "kozielskam",
+   "title": "EOZ Zabytki _ Warstwa zbiorcza _ AKTUALNA"
+  },
+  "layerId": 0,
+  "layerName": "eoz_zabytki_line",
+  "objectIdField": "FID",
+  "query": "where=1%3D1&outFields=*&f=geojson&outSR=4326&geometryPrecision=6&orderByFields=FID+ASC&resultOffset=<paged>&resultRecordCount=1000",
+  "retrievedAt": "2026-10-03T13:24:11Z",
+  "service": "EOZ_Zabytki___Warstwa_zbiorcza___AKTUALNA",
+  "source": "Kraków municipal ArcGIS Online (Zintegrowana Platforma GIS - Gmina Miejska Kraków)",
+  "url": "https://services-eu1.arcgis.com/svTzSt3AvH7sK6q9/ArcGIS/rest/services/EOZ_Zabytki___Warstwa_zbiorcza___AKTUALNA/FeatureServer/0",
+  "what": "municipal heritage register (EOZ), combined layer, line features"
+ },
+ "type": "FeatureCollection"
+}

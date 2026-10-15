@@ -1,0 +1,155 @@
+[
+  {
+    "id": "poi_stub_barbican:historian:en:teaser",
+    "poiId": "poi_stub_barbican",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+      "You have reached Barbican.",
+      "This is placeholder text from the developer stub pack."
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "stub"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_barbican:historian:en:full",
+    "poiId": "poi_stub_barbican",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "full",
+    "sentences": [
+      "This is Barbican.",
+      "The real Historian script arrives with the city pack.",
+      "Until then, this placeholder lets the tour engine and the voice run end to end."
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "stub"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_st_marys:historian:en:teaser",
+    "poiId": "poi_stub_st_marys",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+      "You have reached St Mary's Basilica.",
+      "This is placeholder text from the developer stub pack."
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "stub"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_st_marys:historian:en:full",
+    "poiId": "poi_stub_st_marys",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "full",
+    "sentences": [
+      "This is St Mary's Basilica.",
+      "The real Historian script arrives with the city pack.",
+      "Until then, this placeholder lets the tour engine and the voice run end to end."
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "stub"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_cloth_hall:historian:en:teaser",
+    "poiId": "poi_stub_cloth_hall",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "teaser",
+    "sentences": [
+      "You have reached Cloth Hall.",
+      "This is placeholder text from the developer stub pack."
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "stub"
+      ],
+      "validatorVersion": 0
+    }
+  },
+  {
+    "id": "poi_stub_cloth_hall:historian:en:full",
+    "poiId": "poi_stub_cloth_hall",
+    "personaId": "historian",
+    "lang": "en",
+    "length": "full",
+    "sentences": [
+      "This is Cloth Hall.",
+      "The real Historian script arrives with the city pack.",
+      "Until then, this placeholder lets the tour engine and the voice run end to end."
+    ],
+    "tier": "name-only",
+    "sources": [],
+    "claims": [],
+    "generatedBy": {
+      "kind": "template",
+      "at": "2026-10-03T00:00:00Z"
+    },
+    "validation": {
+      "status": "pass",
+      "checks": [
+        "stub"
+      ],
+      "validatorVersion": 0
+    }
+  }
+]
