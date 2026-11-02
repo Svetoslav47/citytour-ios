@@ -4,6 +4,8 @@
 > ArkTS/ArkUI app for HarmonyOS). Expo SDK 54 · React Native 0.81 · TypeScript, with the same Express + TypeScript
 > course server.
 
+**Team:** iOS port by Svetoslav Iliev ([@Svetoslav47](https://github.com/Svetoslav47)). The original HarmonyOS app was built with Maria Stephanova ([@MariaSt08](https://github.com/MariaSt08)) at HackYeah 2026, Kraków.
+
 CityTour is a mobile tour guide that follows you through the city. It tracks where you are and which way you are
 walking. When you reach a place of historic or cultural significance, it explains that place to you in a studio
 voice, in English, Polish or Chinese.
@@ -74,7 +76,7 @@ text-to-speech voice**. How each piece maps is in [`docs/PORTING.md`](docs/PORTI
 - **Simulator GPS:** a fixed simulated location delivers one fix and then stays silent, so a real-GPS tour on the
   simulator reports `LOC_LOST` after ~26 s; use `xcrun simctl location booted start` with waypoints for a moving
   walk, or the Demo walk.
-- **Expo SDK 54, not 57:** SDK 57 needs Xcode 26; the development machine runs Xcode 16.2.
+- Uses Expo SDK 54 (SDK 57 needs Xcode 26).
 
 ## Requirements (tested versions)
 
@@ -150,3 +152,7 @@ by AI and not reviewed by a historian or native speakers.
 ## AI usage
 
 See [`AI_WORKFLOW.md`](AI_WORKFLOW.md).
+
+## License
+
+MIT. See [LICENSE](LICENSE).
